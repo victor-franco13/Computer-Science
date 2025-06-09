@@ -34,6 +34,8 @@ Trabalho: 30 Pontos
 NF = NP x FP
 Entrega das etapas do projeto: 27/07 e 07/09
 Apresentação: 01 a 04/09
+Arquivo em trabalhos (Teams)
+Projeto unico (incrementar)
 
 Seminário: 10 pontos
 Apresentação:15,16,17 e 22/09
