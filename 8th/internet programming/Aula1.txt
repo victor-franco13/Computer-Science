@@ -5,19 +5,20 @@ Professor: Daniel Furtado
 
 -Pontos:
 -Provas:
-40 pontos P1:30/07/2025
-40 pontos P2: 10/09/2025
+35 pontos P1:05/08/2025
+35 pontos P2: 08/09/2025
 
--Trabalhos semanais: 10 Pontos
+-Trabalhos semanais: 15 pontos
 (individual)
 
--Projeto: Desenvolvimento de Sistema Web
-Entrega da primeira parte: na semana da 1ª avaliação
-Entrega final: no dia da 2ª avaliação
-3 alunos
+-Projeto: 15 pontos Desenvolvimento de Sistema Web
+Entrega da primeira parte: 04 ou 05/08
+Entrega final: 08 ou 09/09
+2 alunos
 Apresentação marcada pelo professor.
 
-rec: 40 pontos
+rec: 70 pontos
+substituição total das provas
 
 Material: Site do professor
 
@@ -27,6 +28,8 @@ Módulo 1:
 Introdução à linguagem HTML
 
 - O que é HTML?
+Hypertext Markup Language (Linguagem de Marcação de Hipertexto)
+Não é uma linguagem de programação
 
 - Breve Histórico
 
