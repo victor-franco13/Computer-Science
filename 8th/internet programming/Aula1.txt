@@ -1,0 +1,161 @@
+Aula 1
+Professor: Daniel Furtado
+
+-Apresentação da ementa
+
+-Pontos:
+-Provas:
+40 pontos P1:30/07/2025
+40 pontos P2: 10/09/2025
+
+-Trabalhos semanais: 10 Pontos
+(individual)
+
+-Projeto: Desenvolvimento de Sistema Web
+Entrega da primeira parte: na semana da 1ª avaliação
+Entrega final: no dia da 2ª avaliação
+3 alunos
+Apresentação marcada pelo professor.
+
+rec: 40 pontos
+
+Material: Site do professor
+
+------------------------//------------------------
+
+Módulo 1:
+Introdução à linguagem HTML
+
+- O que é HTML?
+
+- Breve Histórico
+
+Código HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titulo da Pagina</title>
+    </head>
+    <body>
+
+        <h1>Primeira Pagina</h1>
+        <p>Ola, mundo!</p>
+    
+    </body>
+</html>
+
+-Elementos:
+    -tag de abertura: <nomeDoElemento>
+    -tag de fechamento: </nomeDoElemento>
+        (elementos vazios não tem tag de fechamento)
+    <head>: normalmente inclui dados de configuração do documento
+    como título, tipo de codificação de caracteres, links com outros arquivos, etc.
+    <title>: Aba no navegador e nos resultados dos buscadores.
+    <body>: onde se coloca o conteúdo propriamente dito da página HTML
+    -Atributo:
+        Exemplo: <html lang="pt-BR">
+    -meta: para inserção de metadados
+        charset para idicar o tipo de codificação de caracteres
+        Exemplo: <meta charset="UTF-8">
+
+Hierarquia de Elementos e Árvore DOM
+
+Observações sobre Elementos e Atributos:
+    -Elementos podem ter vários Atributos
+    -Alguns atributos não precisam de valor explicito (atributo vazio)
+    -Aspas simples ou duplas são aceitas, mas aspas duplas são mais comuns
+    -Em alguns casos pode-se colocar o valor sem aspas
+    -HTML não é sensível à caixa para nomes de elementos e atributos
+    -A tag de fechamento pode ser omitida em alguns casos
+    -A identação é recomendada (shift + alt + f)
+    
+Elementos Textuais Básicos da HTML:
+Títulos e parágrafos:
+    <p>: inserção de parágrafos de texto
+         começam com nova linha
+         Espaçamento antes e depois
+    <h1>: para titulos princiais (nivel 1)
+          por padrão, exibido em fonte maior e negrito
+    <h2>: Para subtitulos (nivel 2)
+    <abbr>: para abreviações ou acrônimos
+            atributo title - signifcado da abreviação
+            Exemplo: <abbr title="Faculdade de computação">FACOM</abbr>
+    <address>: para informações de contato (geral ou especifico)
+    <pre>: texto com manutenção de espaços e quebras de linha
+           situações especiais
+    <br>: quebra de linha(apenas para situações especiais)
+          deve ser evitado
+    comentario HTML: <!-- ... -->
+    <q>: citações curtas
+         Apresentada com aspas
+    <blockquote>: citações longas
+                  apresentada com recuo
+    <cite>: citação de títulos de trabalhos criativos como nomes de livros, filmes, etc.
+            apresentada em itálico
+    <hr>: mudança temática a nível de parágrafo
+          apresentado como barra horizontal (padrão)
+    <b>: Deve ser utilizado quando se deseja chamar a atenção para o texto, mas sem adicionar significado de forte importância, e
+    quando não houver outro elemento mais apropriado.
+    <strong>: define o texto como de forte importânciaa ou urgência
+    Por padrão, o conteudo de <b> e <strong> aparecerão em negrito.
+    <i>: palavras de outros idiomas
+         termos técnicos
+         designação taxonômicas, dentre outros.
+    <em>: enfatização textual
+    Por padrão, o conteúdo de <i> e <em> aparecerão em itálico.
+
+Listas:
+    <ul>: unordered list
+      cria uma lista não ordenada (com marcadores)
+
+    <ol>: ordered list
+      cria uma lista ordenada (com numeração)
+
+    <li>: list item
+      Adiciona um novo item de lista
+
+Imagens:
+Inserção de imagens com <img>
+    Exemplo: <img src="imagens/ufu.jpg"  alt="UFU campus Santa Mônica">
+    Atributo src: permite inserir o caminho do arquivo de imagem.
+    Atributo alt: fornece uma descrição da imagem
+    Atributos widht e height: largura e a altura de exibição da  imagem, em pixels(nº inteiro, sem unidade)
+    Atributo title: permite fornecer informação adicional sobre a imagem
+    Elementos <figure> e <figcaption>: Imagem exibida com recuo
+                                   Varias imagens podem compartilhar a mesma legenda
+                                   Figuras não precisam ser necessariamente imagens
+
+Caminhos Relativos de arquivos:
+    Acesso a foto.jpg na mesma pasta do HTML: <img src="foto.jpg">
+    Acesso a foto.jpg na subpasta images: <img src="images/foto.jpg">
+    Acesso a foto.jpg a partir do arquivo pagina.html da pasta produtos: <img src="../imagens/foto.jpg">
+                                                                         <img src="/imagens/foto.jpg">
+                                                                         iniciar o caminho com "/" permite acesso direto
+                                                                         à pasta raiz do website
+
+Dicas sobre caminhos de arquivos e imagens:
+    -Jamais utilizar caminhos absolutos
+    -Prefira letras minúsculas ou adote um padrão ao escolher os nomes
+    -Não utilize caracteres especiais
+    -Utilize imagens com tamanho e resolução adequados
+    -Utilize um formato de imagem apropriado
+
+Hiperlinks: permitem direcionar o usuário para outro website
+    <a href="http://www.ufu.br.html"> UFU </a>
+    Endereço Absoluto: Inclui nome de dominio e protocolo.
+                       Direcionado para outro website
+
+    Endereço Relativo: Sem nome de dominio
+                       Direcionamento dentro do próprio Site
+                       Oreferível sempre que possível
+
+    Estrutura de pastas e Hiperlinks Relativos:
+        Link de arq. HTML da pasta raiz para arq. HTML da pasta raiz
+            <a href="contato.html">Contato</a>
+        Link de arq. HTML da pasta raiz para arq. HTML da pasta produtos
+            <a href="produtos/busca.html">Buscar</a>
+        Link de arq. HTML da pasta produtos para arq. HTML da pasta produtos
+            <a href=“busca.html">Buscar</a>
+        Link de arq. HTML da pasta produtos para arq. HTML da pasta raiz
+            <a href="../contato.html">Contato</a> ou
+            <a href="/contato.html">Contato</a> (apenas no servidor)
