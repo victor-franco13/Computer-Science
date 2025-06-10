@@ -1,6 +1,9 @@
 Aula 2
 Professor: Luiz Gustavo
 
+#sintatico: o que é visto
+#semantico: significado
+
 -Contexto histórico
     -Necessidade por:
                     -baixo entendimento dos códigos(sequencias binarias)
@@ -30,3 +33,59 @@ Professor: Luiz Gustavo
         1970-1980:(ex: ADA, C++, Java)
                   -mudança de processos para dados
                   -abstração, herança, polimorfismo
+
+    -Vantagens no uso de tradutores:
+        -Aumento de produtividade
+        -Economia na produção
+
+-O que é um compilador?
+    -Segundo Aho et. al (2008):
+        "Um compilador é um programa que recebe como entrada 
+        um programa em uma linguagem de programação (linguagem fonte)
+        e o traduz para um programa equivalente em outra linguagem
+        (linguagem objeto)".
+
+    -Um programa que transforma/traduz um código(programa) em outro
+        -Código fonte: geralmente está escrito em linguagem de alto nível
+        -Código objeto: geralmente está em linguagem simbólica (assembly)
+                        ou de máquina (executável)
+                            -dependente da arquitetura onde será executado(arquitetura alvo)
+        -Os códigos fonte e objeto são sintaticamente diferentes, mas devem manter
+        a EQUIVALÊNCIA SEMÂNTICA
+
+-Por que estudar compiladores?
+    -Importante componente do sistema computacional
+    -Compiladores envolve muitas aplicações da teoria na prática
+        -Varredura (scanning), tradução (parsing), análise estática, seleção de instruções (escalonamento)
+    -Técnicas aplicadas em compiladores também podem ser usadas em outros tipos de processamento de linguagens
+    
+-Processadores de linguagem
+    -Compilação: o programa fonte é totalmente traduzido, gerando um programa objeto
+    em linguagem de máquina
+        -A tradução ocorre uma única vez
+        -Um programa objeto pode ser executado várias vezes para processar diferentes dados
+        -Melhor desempenho na execução
+
+    -Interpretação: as operações especificadas no programa fonte são executadas diretamente 
+    sobre as entradas fornecidas pelo usuário
+        -Cada comando é traduzido e executado individualmente
+        -Para cada execução, uma nova tradução é necessária
+        -Oferece melhor diagnóstico de erro
+
+    -Sistema híbrido: o programa fonte é compilado em uma linguagem intermediária, a qual é posteriormente interpretada
+        -Busca um compromisso entre compilação e Interpretação
+        -Compilação prévia facilita a Interpretação
+        -Código intermediário é independente da arquitetura
+
+    -Compilação JIT(Just in time): código intermediário é rtaduzido para linguagem de máquina antes da execução
+        -Variação de alguns ambientes de compilação que buscam um processamento mais rápido
+        das entradas para as saídas
+        -Mantém a portabilidade
+        -Possibilita otimizações dinâmicas
+
+    -Componentes:
+        -Pré-processador: trata as diretivas de compilação, gerando um código fonte modificado
+        -Compilador: gera um código em linguagem simbólica (assembly) a partir do código fonte modificado
+        -Montador(assembler): gera um código de máquina relocável a partir do código assembly
+        -Ligador(linker): resolve os endereços de memória externos
+        -Carregador(loader): reúne todos os arquivos objetos executáveis na memória para execução
