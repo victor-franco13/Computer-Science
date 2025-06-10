@@ -1,0 +1,32 @@
+Aula 2
+Professor: Luiz Gustavo
+
+-Contexto histórico
+    -Necessidade por:
+                    -baixo entendimento dos códigos(sequencias binarias)
+                    -baixa produtividade
+                    -dificuldade de depuração
+    -Surgimento das linguagens simbólicas (assembly)
+        -facilitou o entedimento dos códigos
+        -MAPEAMENTO SIMPLES
+        -dificuldade de portabilidade
+        -especifica para a maquina (dependencia de arquitetura)
+
+    -Surgimento dos primeiros tradutores
+        -Speedcoding -1953(exec lenta)
+            -Código interpretado
+        -Fortran-1957
+            -1º compilador moderno
+
+    -Conceitos importantes ainda usados:
+        1955-1965:(ex: Fortran, Cobol, Algol 60, Lisp, Basic)
+                  -aplicações simples
+                  -preocupação com a eficiência
+
+        1965-1971:(ex: PL/I, Simula, Algol 68, Pascal):
+                  -preocupação com a inteligibillidade do código
+                  -melhores estruturas de controle
+
+        1970-1980:(ex: ADA, C++, Java)
+                  -mudança de processos para dados
+                  -abstração, herança, polimorfismo
