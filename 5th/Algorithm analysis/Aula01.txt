@@ -1,0 +1,44 @@
+Aula 1
+Professora: Marcia Aparecida (marcia@ufu.br)
+
+-Introdução:
+    -definições algoritmo, análisar algoritmo, tempo de execução (função), espaço ocupado
+
+-Fundamentos matemáticos:
+    -somas
+    -recorrências
+    -notação assintótica
+        O,Θ,Ω
+    -indução matemática
+
+-Técnica divide-and-conquer:
+    -passos
+    (exemplo: algoritmos de ordenação)
+-Programação Dinâmica:                            >Passos sao utilizados para problemas de otimização
+    -passos
+-Algoritmos Gulosos
+
+
+
+
+
+-multiplicação de matrizes (n^3):
+  
+    # Cria matriz resultado com dimensões apropriadas
+    linhas = len(matrizA)
+    colunas = len(matrizB[0])
+    matriz_resultado = [[0] * colunas for _ in range(linhas)]
+    
+    # Calcula cada elemento da matriz resultado
+    for i in range(linhas):
+        for j in range(colunas):
+            soma = 0
+            # Calcula o produto escalar da linha i de A pela coluna j de B
+            for k in range(len(matrizB)):
+                soma += matrizA[i][k] * matrizB[k][j]
+            matriz_resultado[i][j] = soma
+    
+    return matriz_resultado
+
+
+
