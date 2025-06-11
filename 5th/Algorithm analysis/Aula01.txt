@@ -16,10 +16,22 @@ Professora: Marcia Aparecida (marcia@ufu.br)
     (exemplo: algoritmos de ordenação)
 -Programação Dinâmica:                            >Passos sao utilizados para problemas de otimização
     -passos
--Algoritmos Gulosos
+-Algoritmos Gulosos:
+    (exemplo:Djikstra, Kruskall, prim, huffman)
+-Algoritmos em grafos.
+--------------------//Estudo de algoritmos já existentes//--------------------
+-Algoritmos aproximados
+    -Problemas não resolvidos
+    -Razão de aproximação: C(S)/C(S*)
 
+-Bibliografia:
+    -Cormen
+    -Eva Tardos
 
-
+-Avaliação:
+P1:30/06 (50 pontos)
+P2:05/09 (50 pontos)
+Rec:17/09
 
 
 -multiplicação de matrizes (n^3):
