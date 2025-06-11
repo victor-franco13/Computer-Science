@@ -1,0 +1,14 @@
+Aula01
+Professor: Renato Pimentel
+
+-Apresentação ementa
+
+-Avaliações:
+
+    -Provas:
+        -P1: 21/07/2025 (35 pontos)
+        -P2: 11/09/2025 (35 pontos)
+
+    -Trabalhos práticos em grupo:
+        -T1: 24/07/2025 (15 pontos)
+        -T2: 28/08/2025 (15 pontos)
