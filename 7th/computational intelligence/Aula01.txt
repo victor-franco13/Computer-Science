@@ -1,0 +1,24 @@
+Aula 1
+Professora: Marcia Aparecida
+
+Inteligencia Computacional:
+
+Tópicos:
+
+    -Redes Neurais Artificiais (1986)
+
+    -Computação Evolutiva
+        -algoritmo genético (1975)
+        -EDA (Estimation of distribution algorithm)
+
+    -Inteligencia de enxame (swarm intellingence)
+        -PSO (1995)
+        -ACO(1997)
+        -bee alhorithms
+    
+    -Lógica Fuzzy
+
+Avaliações:
+    -P1:24/07 (50 pontos)
+    -P2:02/09 (50 pontos)
+    -Rec:18/09 (50 pontos)
