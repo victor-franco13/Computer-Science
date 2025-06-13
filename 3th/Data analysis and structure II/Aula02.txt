@@ -4,8 +4,9 @@ Professor: Renato Pimentel
 -Grafos
 
     -Definição:
-        -Um grafo ou rede é um modelo matemático que representa relações entre objetos - nós ou vértices - de um determinado conjunto.
-        Tais relações no modelo, são representadas por meio de arestas(também chamadas arcos ou ramos) que interconectam tais vértices.
+        -Um grafo ou rede é um modelo matemático que representa relações entre
+        objetos - nós ou vértices - de um determinado conjunto. Tais relações no
+        modelo, são representadas por meio de arestas(também chamadas arcos ou ramos) que interconectam tais vértices.
 
     -Notação: G(V,A): V é o conjunto - não vazio - de vérticer; e A é o conjunto de arestas.
         -Exemplo: V = {1,2,3,4,5},
@@ -14,8 +15,8 @@ Professor: Renato Pimentel
     -Exemplo de aplicações
         -Redes sociais: modelagem de rede como Facebook, Instagram, etc.
         (vértices são os perfis de usuários, arestas, as relações);
-        -Navegação: modelagem de sistemas de navegação, como aplicações de GPS
-        e Google Maps;
+        -Navegação: modelagem de sistemas de navegação, como aplicações
+        de GPS e Google Maps;
         -Biologia: pesquisas em redes neurais (reais), redes de proteínas, e afins;
         -Comunicações: telefonia e fibras óticas, redes de computadores, etc.
 
@@ -34,7 +35,8 @@ Professor: Renato Pimentel
                 interligando-os
 
         -Direcionamento:
-            -a aresta é dirigida ou orientada se a relação entre dois elementos ocorre somente numa direção
+            -a aresta é dirigida ou orientada se a relação entre dois elementos
+            ocorre somente numa direção
                 -depende da aplicação sendo modelada
 
             -o grafo é dirigido (dígrafo) se todas as suas arestas forem dirigidas.
@@ -50,37 +52,75 @@ Professor: Renato Pimentel
                 -grau de saída: número de arestas que partem do vértice;
 
         -Caminho:
-            -sequencia de vértices do grafo, onde cada vértice está conectado ao seguinte por meio de uma aresta.
+            -sequencia de vértices do grafo, onde cada vértice está
+            conectado ao seguinte por meio de uma aresta.
                 -comprimento: quantidade de vértices ao longo do caminho.
 
         -Ciclo:
             -caminho fechado. em que o vértice inicial e o final são o mesmo
-                -o comprimento do ciclo é o número de vértices percorridos do inicial até o final, sem contar novamente este último
+                -o comprimento do ciclo é o número de vértices percorridos do inicial
+                até o final, sem contar novamente este último
         
         -Grafo acíclico: 
-            -grafo que não possui ciclos simples - nos quais cada vértice aparece uma única vez
+            -grafo que não possui ciclos simples - nos quais cada
+            vértice aparece uma única vez
 
         -Laço:
-            -aresta que conecta um vértice a si próprio, i.e. o vértice de origem e o de destino são o mesmo
+            -aresta que conecta um vértice a si próprio, i.e. o vértice de
+            origem e o de destino são o mesmo
                 -todo laço é um ciclo de comprimento 1
 
         -Multigrafo:
-            - grafo que permite arestas múltiplas - quando pares de vértices adjacentes possuem mais de uma aresta os relacionando
+            - grafo que permite arestas múltiplas - quando pares de
+            vértices adjacentes possuem mais de uma aresta os relacionando
                 -exemplo: O grafo das pontes de Königsberg visto.
 
         -Valor das arestas:
-            -arestas podem conter um peso (valor numérico) associado, representado uma grandeza associada ao relacionamento dos vértices que interliga 
+            -arestas podem conter um peso (valor numérico) associado,
+            representado uma grandeza associada ao relacionamento dos vértices
+            que interliga 
                 -exemplo: a distância entre os mesmos
             -um grafo é dito ponderado quando isto ocorre
 
         -Conexão:
-            -o grafo é dito conexo se, para quaisquer dois vértices u e V, é possível encontrar um caminho de u para v ou vice-versa
-                -o grafo é fortemente conexo se para qualquer par u e v, há ambos os caminhos - de u para v e de v para ufu
+            -o grafo é dito conexo se, para quaisquer dois vértices u e V, é possível
+            encontrar um caminho de u para v ou vice-versa
+                -o grafo é fortemente conexo se para qualquer par u e v, há ambos os
+                caminhos - de u para v e de v para u
             -todo grafo não-direcionado conexo é, na verdade, fortemente conexo.
-            -se um grafo ou dígrafo não pe conexo, então o mesmo é desconexo
-                -cada subgrafo de um grafo desconexo que é , por si, conexo, é chamado de componente conexa
-            -um grafo G(V,A) é bipartido se seu conjnto de vértices V puder ser dividido em dois subconjuntos disjuntos - sem intersecção - L e R tais que toda aresta
-            em E somente conecte vértices de subconjuntos diferentes
+            -se um grafo ou dígrafo não é conexo, então o mesmo é desconexo
+                -cada subgrafo de um grafo desconexo que é , por si, conexo, é chamado
+                de componente conexa
+            -um grafo G(V,A) é bipartido se seu conjnto de vértices V puder ser
+            dividido em dois subconjuntos disjuntos - sem intersecção - L e R tais
+            que toda aresta em E somente conecte vértices de subconjuntos diferentes
+
+    -Representaçõoes:
+
+        -Representação computacional:
+            -duas abordagens principais:
+                -matriz de adjacencias
+                -lista de adjacencias
+
+        -Matriz de adjacencias
+            -um grafo G(V,A) contendo n vértices, i.e. |V| ≡ n, é representado
+            numa matriz A = {aij}, quadrada n x n, tal que:
+                -aij={1 se (i,j) ∈ A;
+                      0 caso contrário}
+            -n x n: custo computacional é O(n^2) - independe do número de arestas |A| do grafo
+                -não indicada para grafos com n alto, mas poucas arestas(grafo pouco denso)
+
+            -Matriz de adjacencias de um grafo (não-direcionado):
+                -a matriz é sempre simétrica
+
+            -Matriz de adjacencias de um dígrafo:
+                -a simetria ocorre somente se para cada aresta (i,j) ∈ A houver outra
+                correspondente (j,i) ∈ A para todo i,j ∈ V.
+
+            -Se o grafo ou dígrafo é ponderado: representa-se o peso de cada
+            aresta diretamente na matriz A, i.e.:
+                -aij={wij se (i,j) ∈ A e tem peso wij;
+                      0 caso contrário}   
 
             
 
