@@ -74,10 +74,13 @@ Professor: Renato Pimentel
             -um grafo é dito ponderado quando isto ocorre
 
         -Conexão:
-            -o grafo é dito conexo se, para quaisquer dois vértices u e V, é possível encontrar um caminho de u para v ou vice-versa.
+            -o grafo é dito conexo se, para quaisquer dois vértices u e V, é possível encontrar um caminho de u para v ou vice-versa
                 -o grafo é fortemente conexo se para qualquer par u e v, há ambos os caminhos - de u para v e de v para ufu
             -todo grafo não-direcionado conexo é, na verdade, fortemente conexo.
             -se um grafo ou dígrafo não pe conexo, então o mesmo é desconexo
                 -cada subgrafo de um grafo desconexo que é , por si, conexo, é chamado de componente conexa
+            -um grafo G(V,A) é bipartido se seu conjnto de vértices V puder ser dividido em dois subconjuntos disjuntos - sem intersecção - L e R tais que toda aresta
+            em E somente conecte vértices de subconjuntos diferentes
+
             
 
