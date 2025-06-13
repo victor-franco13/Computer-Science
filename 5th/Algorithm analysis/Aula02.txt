@@ -27,3 +27,14 @@ Professora: Marcia Aparecida
         -um processador genérico
         -as operações são executadas sequencialmente
         -operações como as aritméticas e atribuições têm tempo constante
+
+    -Tamanho da entrada: o número de itens na entrada
+        -exemplo 1: 2
+        -exemplo 2: n
+        -exemplo 3: n
+        -Em geral, este tamanho é dado por n
+
+    -Tempo de execução: expressa como o tempo cresce à medida que cresce o tamanho da entrada
+                        É dado por uma função de acordo com o tamanho da entrada, f(n).
+                        // e o custo das operações.
+    
