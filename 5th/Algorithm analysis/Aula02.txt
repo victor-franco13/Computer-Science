@@ -37,4 +37,19 @@ Professora: Marcia Aparecida
     -Tempo de execução: expressa como o tempo cresce à medida que cresce o tamanho da entrada
                         É dado por uma função de acordo com o tamanho da entrada, f(n).
                         // e o custo das operações.
+
+-Exemplo: Considere um jogo de cartas. As cartas são dadas na mesa. O jogador toma cada carta
+com a mão direita e a coloca na sua mão esquerda, de forma ordenada, da seguinte maneira:
+Busca na mão esquerda, da direita para a esquerda, a posição da carta.
+
+    Entrada: Uma sequência de N elementos, dada em um vetor A[1...n].
+    
+    Algoritmo:
+
+algoritmo ordena_insercao(A,n)
+for j<-2 to n 
+    do chave<-A[j]
+        /*Insira "chave" na sequência ordenada A[1...j-1]*/
+        i<-j-1
+
     
