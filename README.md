@@ -5,9 +5,10 @@ Esse é um repositório criado no meu ultimo semetre da faculdade para alguns ob
 
 -Ter um caderno online.
 
--Como quero construir carreira fora, analise de algoritmo e estrutura de dados são muito cobradas nas entrevistas, portanto preciso manter afiado essas skills.
+-Como quero construir carreira fora do brasil, analise de algoritmo e estrutura de dados são muito cobradas nas entrevistas, portanto preciso manter afiado essas skills.
 
 No mais é isso :D
 
 Códigos:
+
  //: anotações pessoais
