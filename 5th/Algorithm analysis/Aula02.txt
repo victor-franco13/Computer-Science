@@ -1,0 +1,29 @@
+Aula 2
+Professora: Marcia Aparecida
+
+-Conceitos iniciais
+    -Algoritmo: Um procedimento computacional bem especificado que toma, um conjunto de dados como entrada
+    e produz um conjunto de dados como saída.
+        -exemplo 1: Somas dois inteiros a e b.
+                   entrada: dois inteiros
+                   saida: a+b 
+
+        -exemplo 2: Ordenar uma sequência de n valores inteiros
+                   entrada: uma sequência de n inteiros, a1,a2,a3,...,an
+                   saida: uma permutação da sequencia dada tal que a1<a2<a3<...<an
+
+        -exemplo 3: Considere que um robô deva soldar n pontos em uma placa. Ele deve começar em um dado
+                    ponto e retornar a ele após soldar todos os pontos, com o menor custo possível considerando
+                    as distâncias entre os pontos.
+                    entrada: os pontos através de suas coordenadas
+                    saida: A ordem em que os pontos devem ser soldados, com o menor custo possível
+
+    -Analisar algoritmo: Descrever ou prever os recursos necessários para a execução do algoritmo.
+        -os principais recursos são:
+            -tempo de execução
+            -espaço ocupado
+
+    -Modelo de computação: especifica o ambiente tecnológico, as pérações e seus custos
+        -um processador genérico
+        -as operações são executadas sequencialmente
+        -operações como as aritméticas e atribuições têm tempo constante
