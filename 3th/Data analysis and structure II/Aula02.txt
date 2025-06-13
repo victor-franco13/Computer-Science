@@ -1,0 +1,83 @@
+Aula 02
+Professor: Renato Pimentel
+
+-Grafos
+
+    -Definição:
+        -Um grafo ou rede é um modelo matemático que representa relações entre objetos - nós ou vértices - de um determinado conjunto.
+        Tais relações no modelo, são representadas por meio de arestas(também chamadas arcos ou ramos) que interconectam tais vértices.
+
+    -Notação: G(V,A): V é o conjunto - não vazio - de vérticer; e A é o conjunto de arestas.
+        -Exemplo: V = {1,2,3,4,5},
+        A={(1,2),(1,3)(2,3)(2,5),(3,4)(3,5)(4,2)(4,5)}
+
+    -Exemplo de aplicações
+        -Redes sociais: modelagem de rede como Facebook, Instagram, etc.
+        (vértices são os perfis de usuários, arestas, as relações);
+        -Navegação: modelagem de sistemas de navegação, como aplicações de GPS
+        e Google Maps;
+        -Biologia: pesquisas em redes neurais (reais), redes de proteínas, e afins;
+        -Comunicações: telefonia e fibras óticas, redes de computadores, etc.
+
+    -Conceitos:
+        -Vértice
+            -é cada item do conjunto em estudo representado no grafo
+            -a representação do vértice depende do problema estudado:
+                -um indivíduo (perfil) numa rede social;
+                -um lugar em um mapa;
+                -um computador ou servidor numa rede, etc.
+
+        -Aresta:
+            -representa a ligação conexão existente entre dois vértices
+                -modela a relação entre ambos;
+                -dois vértices de um grafo são adjacentes - ou vizinhos - se existem uma aresta
+                interligando-os
+
+        -Direcionamento:
+            -a aresta é dirigida ou orientada se a relação entre dois elementos ocorre somente numa direção
+                -depende da aplicação sendo modelada
+
+            -o grafo é dirigido (dígrafo) se todas as suas arestas forem dirigidas.
+                -num dígrafo, é possível haver uma conexão a partir de um vértice. A para outro B, sem existir
+                outra conexão no sentido oposto.
+
+        -Grau:
+            -o número de vizinhos que um vértice possui
+                -quantidade de arestas que chegam ao vértice, ou partem do mesmo
+            
+            -no caso de um dígrafo, há dois tipos:
+                -grau de entrada: número de arestas que chegam ao vértice;
+                -grau de saída: número de arestas que partem do vértice;
+
+        -Caminho:
+            -sequencia de vértices do grafo, onde cada vértice está conectado ao seguinte por meio de uma aresta.
+                -comprimento: quantidade de vértices ao longo do caminho.
+
+        -Ciclo:
+            -caminho fechado. em que o vértice inicial e o final são o mesmo
+                -o comprimento do ciclo é o número de vértices percorridos do inicial até o final, sem contar novamente este último
+        
+        -Grafo acíclico: 
+            -grafo que não possui ciclos simples - nos quais cada vértice aparece uma única vez
+
+        -Laço:
+            -aresta que conecta um vértice a si próprio, i.e. o vértice de origem e o de destino são o mesmo
+                -todo laço é um ciclo de comprimento 1
+
+        -Multigrafo:
+            - grafo que permite arestas múltiplas - quando pares de vértices adjacentes possuem mais de uma aresta os relacionando
+                -exemplo: O grafo das pontes de Königsberg visto.
+
+        -Valor das arestas:
+            -arestas podem conter um peso (valor numérico) associado, representado uma grandeza associada ao relacionamento dos vértices que interliga 
+                -exemplo: a distância entre os mesmos
+            -um grafo é dito ponderado quando isto ocorre
+
+        -Conexão:
+            -o grafo é dito conexo se, para quaisquer dois vértices u e V, é possível encontrar um caminho de u para v ou vice-versa.
+                -o grafo é fortemente conexo se para qualquer par u e v, há ambos os caminhos - de u para v e de v para ufu
+            -todo grafo não-direcionado conexo é, na verdade, fortemente conexo.
+            -se um grafo ou dígrafo não pe conexo, então o mesmo é desconexo
+                -cada subgrafo de um grafo desconexo que é , por si, conexo, é chamado de componente conexa
+            
+
