@@ -1,0 +1,13 @@
+Aula 4
+Professor: Luiz Gustavo
+
+    -TOKEN
+    -Classe de elementos aceitos em uma linguagem de programação
+        -Unidade básica da sintaxe
+        ex: identificadores, operadores, palavras-chave, etc.
+
+    -Elo de ligação (lexíca/sintática)
+        -representa os lexemas (palavras aceitas pela linguagem) do 
+        código fonte
+        -corresponde a um nó folha (simbolo terminal de uma gramática livre de contexto)
+        da árvore sintática
