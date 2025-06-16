@@ -89,5 +89,3 @@ Professor: Daniel Furtado
             -o value em campos textuais pode ser utilizado para fornecer um
             valor inicial, já preenchido, para o campo
             -o usuário poderá manter o valor sugerido ou alterá-lo
-
-            
