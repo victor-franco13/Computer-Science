@@ -34,15 +34,4 @@ Análise Léxica
         -correlacionar as mensagens de erro com o código fonte
         -processar diretivas de controle (ex: expansão de macros)
 
-    -TOKEN
-    -Classe de elementos aceitos em uma linguagem de programação
-        -Unidade básica da sintaxe
-        ex: identificadores, operadores, palavras-chave, etc.
-
-    -Elo de ligação (lexíca/sintática)
-        -representa os lexemas (palavras aceitas pela linguagem) do 
-        código fonte
-        -corresponde a um nó folha (simbolo terminal de uma gramática livre de contexto)
-        da árvore sintática
-
             
