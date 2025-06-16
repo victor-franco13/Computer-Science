@@ -12,5 +12,7 @@ No mais é isso :D
 Códigos:
 
  //: anotações pessoais
+
  p?: perguntas
+ 
  ex: exemplo
