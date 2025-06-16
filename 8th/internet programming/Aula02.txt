@@ -1,0 +1,93 @@
+Aula 2
+Professor: Daniel Furtado
+
+-Fundamentos da HTML
+    -Imagem como Hiperlink
+        -Conteúdo do elemento a não precisa ser textual
+        -pode-se ter outros elementos, inclusive o img
+            -a imagem será link
+            ex:
+            <a href="http://www.ufu.br">
+                <img src="logo-ufu.jpg" alt="UFU">
+            </a>
+    
+    -Tabelas
+    <table>: Criação da tabela
+    
+    <tr>: table row
+        -define uma nova linha na tabela
+    
+    <td>:table data
+        -define uma cédula padrão dentro de uma linha
+        
+        -Elementos adicionais:
+        <thread>,<tbody>,<tfoot>:
+            -definem cabeçalho corpo e rodapé na tabela
+            -utilizados em tabelas longas
+            
+        <th>:table head
+            -definem uma célula de cabeçalho dentro de uma linha
+            -navegador exibe o conteúdo em negrito e centralizado
+
+    -Categorias de contúdo: HTML5
+
+        -Elementos de bloco e elementos de linha
+            -Elementos de bloco:
+                -Começam e terminam com uma quebra de linha
+                -Ocupam toda a largura disponível
+                ex: <p>,<h1>,<table>,<ol>,<ul>,<li>,<div>
+
+            -Elementos de linha:
+                -Não começam com quebra de linha
+                -Ocupam somente a largura necessária para sua exibição
+                ex: <img>,<a>,<span>,<b>,<em>
+
+            -Elementos <div> e <span>
+            <div>: container genérico de nível de bloco
+                -utilizado para agrupar outros elementos
+                -sem semântica (não agrega significado)
+            
+            <span>: container genérico de nível de linha
+                -sem semântica
+            
+        -Conteúdo embutido - <iframe>
+            -elemento <iframe> permite embutir o conteúdo de outra página HTML
+            dentro da página atual
+
+        -Elemento Dialog
+            -permite criar uma caixa de diálogo que pode ser usada como janela modal
+
+        -Atributos globais
+            -são atributos que podem ser utilizados em todos os elementos HTML
+            ex:
+            -id: cria um nome de identificação único para o elemento
+            -title: adiciona informação extra ao elemento
+            -class: permite refenciar uma classe class
+            -style: permite inserir código CSS embutido no elemento
+            -data-*: atributo de dado customizável
+            -contenteditable: torna o conteúdo do elemento editável
+            -lang: especifica a linguagem/pais do conteúdo do elemento
+
+        -Entidades HTML: caracteres que não podem ser colocados diretamente no
+        documento HTML, como parte do conteúdo
+        ex: (<) e (>) são reservados para compor as tags
+            80 km/h: <p> 80&nbsp;km/h </p>
+
+        -Elemento <section>
+            -elemento de seccionamento de conteúdo
+
+        -Formulários
+            -action: indica o script no servidor que receberá e processará os
+            dados do formulpario
+            -method: permite indicar o método HTTP a ser utilizado no envio do form
+                -GET: dados enviados pela própria URL (GET request)
+                -POST: dados enviados no corpo da requisição (POST request)
+            -label: rótulo identificando o campo
+                -vinculado ao campo pelos atributos for/id
+
+        -Atributo value em campos Textuais
+            -o value em campos textuais pode ser utilizado para fornecer um
+            valor inicial, já preenchido, para o campo
+            -o usuário poderá manter o valor sugerido ou alterá-lo
+
+            
