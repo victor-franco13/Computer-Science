@@ -1,0 +1,48 @@
+Aula 3
+Professor: Luiz Gustavo
+
+Análise Léxica
+    -Processo iterativo e reativo
+
+    p?:por que dividir análise léxica e sintática?
+        -permite simplificar uma das fases (projeto mais simples)
+        ex: análise sintática com e sem tratamento de comentários
+
+        -permite a adoção de técnicas especializadas/otimizadas
+        para certas tarefas (melhor eficiência do compilador)
+        ex: técicas de buferização especializadas para a leitura de
+        caracteres e o processamento de tokens
+
+        -facilita portabilidade do compilador (manutenção)
+            -peculiaridades de linguagem ou dos dipositivos podem ser
+            restringidas ao analisador léxico facilitando modificações
+        ex: tratamento de símbolos especiais (^ em Pascal) ou fora do
+        padrão (ex: letras do alfabeto grego)
+
+    -Análise léxica é a 1ª fase da etapa de analíse
+        -scanner e lexer (análise)
+        -sub-rotina do analisador sintático
+
+    -Tarefa principal:
+        -agrupar os caracteres do código fonte em tokens
+            -ler os caracteres de um buffer de entrada
+                -agrupá-los em lexemas
+                    -produzir uma sequência de tokens
+
+    -Tarefas secundárias:
+        -remover símbolos desnecessários
+        -correlacionar as mensagens de erro com o código fonte
+        -processar diretivas de controle (ex: expansão de macros)
+
+    -TOKEN
+    -Classe de elementos aceitos em uma linguagem de programação
+        -Unidade básica da sintaxe
+        ex: identificadores, operadores, palavras-chave, etc.
+
+    -Elo de ligação (lexíca/sintática)
+        -representa os lexemas (palavras aceitas pela linguagem) do 
+        código fonte
+        -corresponde a um nó folha (simbolo terminal de uma gramática livre de contexto)
+        da árvore sintática
+
+            
