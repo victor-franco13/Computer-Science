@@ -40,4 +40,32 @@ Professor: Renato Pimentel
                 -Isto permite ocultar a implementação, permitindo sua alteração sem interferir
                 no funcionamento de qualquer código que o utilize - desde que a interface
                 seja respeitada
-                
+
+        -Modularização do TAD:
+            -grafo.h: a interface em si: definição do tipo opaco; funções disponíveis
+            para manipular o grafo (protótipos)
+            -grafo.c: o que deve ficar oculto do usuário, além da implementação das
+            funções definidas pela interface. Inclui a definição do tipo grafo
+
+        -Tipo grafo: estrutura que contém:
+            -eh_ponderado: se as arestas têm peso ou não
+            -nro_vert: número de vértices que o grafo - tamanho do conjunto V;
+            -grau_max: número máximo de arestas a qual um vértice poderá se
+            conectar;
+            -arestas: ponteiro onde é alocada a matriz de arestas do grafo;
+            -pesos: ponteiro onde é alocada a matriz de pesos das arestas do grafo -
+            caso o mesmo seja ponderado;
+            -grau: ponteiro onde é alocado um vetor que armazena o número de
+            arestas já associadas a um vértice
+
+    -Exemplo de código:
+        -grafo.h:
+        typedef struct grafo Grafo ;
+        Grafo * cria_Grafo ( int nro_vertices , int grau_max , int
+            eh_ponderado ) ;
+        void libera_Grafo ( Grafo * gr ) ;
+        int insereAresta ( Grafo * gr , int orig , int dest , int
+            eh_digrafo , float peso ) ;
+        int removeAresta ( Grafo * gr , int orig , int dest , int
+            eh_digrafo ) ;
+
