@@ -3,7 +3,7 @@ Professor: Renato Pimentel
 
 -Grafos
     -Revisão de matriz de adjacencias
-    
+
     -Lista de adjacências
         -Um grafo G(V,A) contendo n vértices e m arestas, i.e. |V|  ≡ n e
         |A|  ≡ m, é representado por um array (vetor) Adj com n listas, uma
@@ -28,3 +28,16 @@ Professor: Renato Pimentel
             -Cada aresta (u,v) ∈ A é representada uma única vez
             -A soma dos comprimentos das listas de adjacências dos vértices
             corresponde a m ≡ |A|
+
+    -Um tipo abstrato de dados (TAD) para grafo
+        -Consideramos um tipo abstrato de dados opaco em linguagem C para
+        representação por lista de adjacencias
+
+            -Tipo opaco
+                -A ED será referenciada mediante um ponteiro para a mesma, ao invés de
+                uma variável do tipo Grafo diretamente
+                ex:ocorre com o tipo file em C
+                -Isto permite ocultar a implementação, permitindo sua alteração sem interferir
+                no funcionamento de qualquer código que o utilize - desde que a interface
+                seja respeitada
+                
