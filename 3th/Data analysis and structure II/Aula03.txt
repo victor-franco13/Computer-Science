@@ -175,3 +175,32 @@ Professor: Renato Pimentel
         }
 
         -Removendo uma aresta
+        -exemplo de uso:
+        removeAresta(gr, 0, 1, 0, 0);
+
+        -grafo.c: removendo uma aresta do grafo
+        int removeAresta ( Grafo * gr , int orig , int dest , int
+                eh_digrafo ) {
+            if( gr == NULL )
+                return 0;
+            if( orig < 0 || orig >= gr - > nro_vertices )
+                return 0;
+            if( dest < 0 || dest >= gr - > nro_vertices )
+                return 0;
+        
+            // procura pela aresta
+            int i = 0;
+            while ( i < gr - > grau [ orig ] && gr - > arestas [ orig ][ i ] !=dest)
+                i ++;
+            if( i == gr - > grau [ orig ]) // elemento não encontrado
+                return 0;
+            gr - > grau [ orig ] --;
+            gr - > arestas [ orig ][ i ] = gr - > arestas [ orig ][ gr - > grau [
+                orig ]];
+            if( gr - > eh_ponderado )
+                gr - > pesos [ orig ][ i ] = gr - > pesos [ orig ][ gr - > grau [ orig
+                ]];
+            if( eh_digrafo == 0)
+                removeAresta ( gr , dest , orig ,1) ;
+            return 1;
+        }
