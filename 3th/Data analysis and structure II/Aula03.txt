@@ -69,3 +69,109 @@ Professor: Renato Pimentel
         int removeAresta ( Grafo * gr , int orig , int dest , int
             eh_digrafo ) ;
 
+        -Implementação do TAD opaco Grafo: grafo.C
+        # include < stdio .h >
+        # include < stdlib .h >
+        # include " Grafo .h" // inclui os protótipos
+
+        // Definição do tipo Grafo
+        struct grafo {
+            int eh_ponderado ;
+            int nro_vertices ;
+            int grau_max ; // tamanho das listas
+            int ** arestas ; // array de arestas
+            float ** pesos ;
+            int* grau ; // quantidade de elementos em cada lista
+        };
+
+        -Exemplo de uso:
+        Grafo *gr;
+        gr = cria_Grafo(10, 7, 0);
+
+        -grafo.c: criação do grafo
+        Grafo * cria_Grafo ( int nro_vertices , int grau_max , int
+            eh_ponderado ) {
+            Grafo * gr ;
+            gr = ( Grafo *) malloc ( sizeof ( struct grafo ) ) ;
+            if( gr != NULL ) {
+                int i ;
+                gr - > nro_vertices = nro_vertices ;
+                gr - > grau_max = grau_max ;
+                gr - > eh_ponderado = ( eh_ponderado != 0) ?1:0;
+                gr - > grau = ( int *) calloc ( nro_vertices , sizeof (int ) ) ;
+                gr - > arestas = ( int **) malloc ( nro_vertices * sizeof (
+                int *) ) ;
+                for ( i =0; i < nro_vertices ; i ++)
+                    gr - > arestas [ i ] = ( int *) malloc ( grau_max * sizeof (
+                int) ) ;
+
+                if( gr - > eh_ponderado ) {
+                    gr - > pesos = ( float **) malloc ( nro_vertices *
+                sizeof ( float *) ) ;
+                    for ( i =0; i < nro_vertices ; i ++)
+                        gr - > pesos [ i ] = ( float *) malloc ( grau_max *
+                sizeof ( float ) ) ;
+                }
+            }
+            return gr ;
+        }
+
+        -Liberando o grafo da memória 1
+            -Exemplo de uso:
+            Grafo *gr;
+            gr = cria_Grafo(10, 7, 0);
+            .
+            .
+            libera_Grafo(gr);
+
+        -grafo.c: liberando o grafo
+        void libera_Grafo ( Grafo * gr ) {
+        if( gr != NULL ) {
+        int i ;     
+        // libera a matriz de arestas
+        for ( i =0; i < gr - > nro_vertices ; i ++)
+        free ( gr - > arestas [ i ]) ;
+        free ( gr - > arestas ) ;
+                // libera a matriz de pesos
+                if( gr - > eh_ponderado ) {
+                    for ( i =0; i < gr - > nro_vertices ; i ++)
+                        free ( gr - > pesos [ i ]) ;
+                    free ( gr - > pesos ) ;
+                }
+                free ( gr - > grau ) ;
+                free ( gr ) ;
+            }
+        }
+
+        -Inserindo uma aresta 1
+
+        -Exemplo de uso
+        Grafo *gr;
+        gr = cria_Grafo(10, 7, 0);
+        insereAresta(gr, 0, 1, 0, 0);
+        insereAresta(gr, 1, 3, 0, 0);
+
+        -grafo.c: inserindo uma aresta no grafo
+        int insereAresta ( Grafo * gr , int orig , int dest , int
+            eh_digrafo , float peso ) {
+            if( gr == NULL )
+                return 0;       
+            // verifica a exist ê ncia dos vé rtices de origem e destino
+            if( orig < 0 || orig >= gr - > nro_vertices )
+                return 0;
+        if( dest < 0 || dest >= gr - > nro_vertices )
+            return 0;
+
+        // insere aresta ao final da linha
+        gr - > arestas [ orig ][ gr - > grau [ orig ]] = dest ;
+        if( gr - > eh_ponderado )
+            gr - > pesos [ orig ][ gr - > grau [ orig ]] = peso ;
+        gr - > grau [ orig ]++;
+
+        // insere a outra aresta se não for dí grafo
+        if ( eh_digrafo == 0)
+            insereAresta ( gr , dest , orig ,1 , peso ) ;
+        return 1;
+        }
+
+        -Removendo uma aresta
