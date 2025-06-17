@@ -1,7 +1,7 @@
 Aula 4
 Professor: Luiz Gustavo
 
-    -TOKEN
+-TOKEN
     -Classe de elementos aceitos em uma linguagem de programação
         -Unidade básica da sintaxe
         ex: identificadores, operadores, palavras-chave, etc.
@@ -11,3 +11,82 @@ Professor: Luiz Gustavo
         código fonte
         -corresponde a um nó folha (simbolo terminal de uma gramática livre de contexto)
         da árvore sintática
+
+    -Representado por um par <Nome, Atributo>:
+        -nome: símbolo abstrato que indica o tipo do TOKEN
+            -símbolos de entrada do analisador sintático
+
+        -atributo: guarda informações adicionais necessárias (opcional)
+            -atributo pode ser um tipo estruturado que guarda várias informações
+            ex: lexema encontrado, valor de dado, localização na entrada, etc.
+
+    -Classes de tokens presentes em uma linguagem:
+        -palavras-chave
+        -operadores (organizados individualmente ou em classes)
+        -indentificadores (ID)
+        -constantes
+            ex:numero ou cadeia de literais
+        -símbolo de pontuação
+            ex:parênteses, ponto-e-virgula
+
+    -Padrão de um Token
+        -Regra que define o conjunto de palavras associado a um token
+            -descreve a forma (cadeia de caracteres) que os lexemas
+            de um token podem assumir
+            
+    -Expressões regulares são uma importante notação
+    para especificar os padões de lexemas
+
+    -Os padrões são usados na construção dos reconhecedores das cadeias
+    de conjunto
+
+-Lexema
+    -Sequência de caracteres no programa fonte que casa com o padrão
+    de um token
+
+    -Palavra reconhecida pelo analisador léxico como uma instância
+    do token
+
+    -Atributos dos tokens
+        -Usado quando mais de um lexema casa com o padrão do token
+            ex: indentificador, operador relacional, etc.
+            
+        -Fornece informações adicionais para as fases seguintes do
+        compilador
+            -Descreve o lexema representado pelo token
+            -Nome do token influencia nas decisões durante a
+            análise sintática
+            -Valor do atributo influencia na tradução do token após
+            o reconhecimento sintático
+
+    -Erros léxicos
+        -Identificar um erro no código fonte durante a análise léxica
+        é difícil sem o auxílio de outros componentes
+
+        -Erros léxicos ocorrem quando nenhum dos padrões de token casa
+        com a entrada restante
+
+        -Erros associados ao tratamento de constantes
+            -Exceder o limite de casas decimais e do expoente de
+            números reais (tanto no tamanho quanto no valor)
+            -Exceder o limite máximo da cadeia de caracteres
+            -Exceder o limite do número de dígitos e do valor de
+            um inteiro
+
+        -Estratégias de recuperação podem ser usadas:
+            -Envolve transformações na entrada restante:
+                -Remover um caractere
+                -Inserir um caractere que falta
+                -Substituir um caractere por outros
+                -Transpor dois caracteres adjacentes
+
+        -"Modo pânico": remove caracteres até reconhecer o lexema
+
+        -Estratégia mais simples aplica uma unica transformação
+
+        -Estrategia mais geral busca encontrar o menor número de
+        transformações necessárias para obter um lexema válido
+            -estratégia muito dispendiosa
+            -não garante efetividade dos resultados
+
+-Varredura (Scanner)

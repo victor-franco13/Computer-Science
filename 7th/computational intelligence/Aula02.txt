@@ -1,0 +1,10 @@
+Aula 2
+Professora: Marcia Aparecida
+
+
+    -Teste de turing
+        -computador passaria neste teste se um interrogador humano não
+        pudesse distinguir se as respostas vêm de uma pessoa ou não,
+        sendo as respostas escritas, pois não há interação direta entre
+        o interrogador 
+
