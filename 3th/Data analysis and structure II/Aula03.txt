@@ -1,0 +1,30 @@
+Aula 3
+Professor: Renato Pimentel
+
+-Grafos
+    -Revisão de matriz de adjacencias
+    
+    -Lista de adjacências
+        -Um grafo G(V,A) contendo n vértices e m arestas, i.e. |V|  ≡ n e
+        |A|  ≡ m, é representado por um array (vetor) Adj com n listas, uma
+        para cada vértice de V.
+
+        -Para cada vértice u ∈ V, a lista Adj[u] contém todos os vértices
+        adjacentes a u em G (representados por índices ou ponteiros).
+            -Ou seja, para cada vértice u ∈ V, Adj[u] contém todos os vértices v tais
+            que a aresta (u,v) pertença a A
+
+        -O custo computacional é O(n+m) - em geral menor que o custo no
+        caso de matriz de adjacências
+            -Indicada para grafos com n alto, mas poucas arestas
+
+        -Lista de adjacências de um grafo (não direcionado):
+            -Cada aresta (u,v) ∈ A é representada duas vezes:
+                -uma na lista de adjacências do vértice u, e outra na lista do vértice v
+            -A soma dos comprimentos das listas de adjacências dos vértices
+            corresponde a 2m ≡ 2|A|
+
+        -Lista de adjacências de um dígrafo:
+            -Cada aresta (u,v) ∈ A é representada uma única vez
+            -A soma dos comprimentos das listas de adjacências dos vértices
+            corresponde a m ≡ |A|
