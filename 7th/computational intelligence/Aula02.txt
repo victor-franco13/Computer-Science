@@ -1,10 +1,88 @@
 Aula 2
 Professora: Marcia Aparecida
+    
+-Redes Neurais Artificiais
 
+    -Aspectos Biológicos
+        -Neurônio biológico
+            -Neurônios se conectam através das sinapses
+            
+            -Sinais elétricos, vindos de outras células,
+            entram no neurônio através dos dendritos
+            
+            -Processados esses sinais e atingindo um dado
+            limiar, o neurônio emite sinal de saída pelo
+            axônio
+            
+            -Sinais elétricos são gerados por meio de
+            reações químicas
 
-    -Teste de turing
-        -computador passaria neste teste se um interrogador humano não
-        pudesse distinguir se as respostas vêm de uma pessoa ou não,
-        sendo as respostas escritas, pois não há interação direta entre
-        o interrogador 
+    -Modelo artificial:
+        -Observou-se que após alguma experiência
+        nova, o cérebro altera as conexões e quando a
+        mesma experiência é repetida, as conexões
+        são reforçadas
+
+        -Proposto por McCulloch e Pits em 1943, sendo
+        denominado Perceptrons
+        
+        -O neurônio considera as entradas de demais
+        neurônios e os pesos das conexões, da seguinte
+        maneira:
+         n
+        Σi=1  WiXi
+
+        -Função f, dita função de ativação, tem como
+        entrada este somatório e então retorna saída y
+               n
+        net = Σi=1 WiXi         y=f(net)
+
+        -Há diferentes funções que podem ser utilizadas
+
+        -Problemas com Perceptrons
+        -Minsky e Papert: Resolve apenas problemas
+        linearmente separáveis
+
+        -Hebb: não ponderava a relevância de cada
+        neurônio da entrada para a saída
+
+        -Utilizavam apenas uma camada e função de
+        ativação degrau limiar
+
+    -Classificação de redes neurais artificiais
+
+        -Arquitetura: Número de camadas
+
+        -Conectividade: parcialmente/completamente conectada
+
+        -Fluxo: sentido em que é feito o processamento
+
+        -Tipo de treinamento: como é utilizada para
+        treinamento, há algumas maneiras de fazer o
+        treinamento
+
+    -Tipos de funções de ativação
+    
+        -Função degrau  
+                f(net){0, se net <=0
+                       1, se net >0}
+        
+        -Função limiar(O)
+                f(net){0, se net <=O
+                       1, se net >O}
+
+        -Função degrau unitário
+                f(net){0, se net <=O
+                       1, se net >O}
+
+        -Função linear
+                f(net)=a*net+b
+
+        -Função semi-linear(Rampa)
+                f(net)={-a, se net<=-a
+                        net, se -a<net<=a
+                        a, se net>a}
+
+        -Função Logística (Sigmóide)
+                f(net)=1/(1+e^(-net))
 
