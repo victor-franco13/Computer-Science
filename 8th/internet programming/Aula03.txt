@@ -47,5 +47,58 @@ Professor: Daniel Furtado
         -O atributo value em campos textuais pode ser utilizado para fornecer um
         valor inicial, já preenchido, para o campo;
             -Pode ser alterado
+
+    -Atributo enctype
+        -O atributo enctype pode ser necessário no <form> para alterar o método de codificação
+        dos dados do formulário ao serem enviados
+        
+        -Deve ser usado apenas em conjunto com method="post"
+
+    -<form>
+        -Atributo autocomplete
+            -<form autocomplete="on">
+            -<form autocomplete="off">
+
+    -Campo radio -<input type="radio">
+        -Permite a seleção de um único item dentre vários itens
+        ex:
+        <fieldset>
+            <legend>Escolha o Estado Civil</legend>
+            <div>
+                <input type="radio" id="solteiro" name="estadocivil" value="solteiro">
+                <label for="solteiro">Solteiro</label>
+            </div>
+            <div>
+                <input type="radio" id="casado" name="estadocivil" value="casado">
+                <label for="casado">Casado</label>
+            </div>
+            <div>
+                <input type="radio" id="divorciado" name="estadocivil" value="divorciado">
+                <label for="divorciado">Divorciado</label>
+            </div>
+        </fieldset>
+
+    -Campo checkbox - <input type="checkbox">
+        -Permite a seleção de múltiplos itens
+        ex:
+        <fieldset>
+            <legend>Esportes de Interesse</legend>
+            <div>
+                <input type="checkbox" id="natação" name="esportes[]" value="natação" checked>
+                <label for="natação">Natação</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ciclismo" name="esportes[]" value="ciclismo">
+                <label for="ciclismo">Ciclismo</label>
+            </div>
+            <div>
+                <input type="checkbox" id="futebol" name="esportes[]" value="futebol">
+                <label for="futebol">Futebol</label>
+            </div>
+        </fieldset>
             
-    
+    -Campos para Data e Hora
+        ex:
+        -<input type="date"...>
+        -<input type="time"...>
+        -<input type="datetime-local"...>
