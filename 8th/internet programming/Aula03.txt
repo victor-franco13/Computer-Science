@@ -99,6 +99,176 @@ Professor: Daniel Furtado
             
     -Campos para Data e Hora
         ex:
-        -<input type="date"...>
-        -<input type="time"...>
-        -<input type="datetime-local"...>
+        <input type="date"...>
+        <input type="time"...>
+        <input type="datetime-local"...>
+
+    -Mês e semana
+        ex:
+        <input type="month"...>
+        <input type="week"...>
+
+    -E-mail
+        ex:
+        <input type="email">
+    
+    -Telefone
+        ex:
+        <input type="tel">
+
+    -Number e range
+        ex:
+        <input type="number">
+        <input type="range">
+
+    -Campo Oculto hidden
+        ex:
+        <input type="hidden">
+            -Não aparece para o usuário
+            -Comumente utilizado para envio de dados de controle
+
+    -Seleção de cor
+        ex:
+        <input type="color">
+
+    -Campo de preenchimento obrigatório
+        -Para indicar que um campo é preenchimento obrigatório, basta adicionar
+        o atributo required no elemento
+            ex:
+            <input type="text" name="produto" required>
+
+    -Select
+        -Permite seleção de um ou vários itens de uma lista suspensa
+            ex:
+            <p><label>Estado:
+                <select name="estado" required>
+                    <option value="">Selecione</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                </select>
+            </label></p>
+
+    -textarea
+        -Campo para textos extensos, com múltiplas linhas
+            ex:
+            <textarea name="msg" rows="5" cols="10">
+                campo textual de múltiplas linhas
+            </textarea>
+
+    -Atributos para campos textuais
+        -pattern
+            -Permite indicar expressão regular para filtrar os valores permitidos
+                ex:
+                <input type="text" pattern="\d{3}.\d{3}.\d{3}-\d{2}">
+
+        -minlength e maxlength
+            -Permitem definir o número mínimo e o número máximo de caracteres permitidos
+            para o campo, respectivamente
+                ex:
+                <input type="text" maxlength="30">
+
+        -placeholder
+            -Permite a inserção de uma dica de preenchimento
+                ex:
+                <input type="text" placeholder="Informe o nome completo">
+
+        -autofocus
+            -adicine este atributo ao campo para permitir que ele receba o foco assim que a página
+            seja carregada (o cursor ficará piscando no campo, aguardando o preenchimento)
+
+        -readonly
+            -Torna o campo somente leitura, impossibilitando a alteração do seu valor
+            -o campo é submetido normalmente
+
+        -disabled
+            -Desabilita o campo. O usuário não poderá interagir ou editar
+            -Campos desabilitados não são submetidos com o formulário
+
+        -size
+            -Indica a largura de apresentação de um campo <input> e a altura de um <select>
+
+-Módulo 2
+    -Fundamentos da CSS
+        -O que é CSS?
+            -Linguagem de estilos para definir aspectos de apresentação
+            -Cascading Style Sheets - Folhas de Estilo em Cascata
+
+        -Principais formas de inserir CSS
+            -Embutido na linha (inline)
+                -Atributo style
+                ex:
+                <p style="font-size: 14pt; color: blue;">
+                    Texto em azul com fonte tamanho 14 pontos
+                </p>
+
+            -Folha de estilos embutida no HTML (interno)
+                -Utiliza o elemento <style> dentro do <head>
+                -Estilos específicos da página, não compartilhados
+                ex:
+                <html>
+                    <head>
+                        <style>
+                            p {
+                                font-size: 14pt;
+                                color: blue;
+                            }
+                        </style>
+                    </head>
+
+                    <body>
+                    <p> ... </p>
+                    </body>
+
+                </html>
+
+            -Folha de estilos em arquivo separado (externo)
+                -Utiliza o elemento <link> para referenciar um arquivo com código CSS
+                -Várias páginas podem utilizar o código CSS do arquivo
+                ex:
+                <html>
+                    
+                    <head>
+                            <link rel="stylesheet" href="style.css">
+                    </head>
+                    
+                    <body>
+                    <p> ... </p>
+                    </body>
+                
+                </html>
+
+        -Regra
+            -Seletor da regra
+                -indica quais partes da página serão afetadas pela regra CSS.
+                
+            -Propriedade CSS:
+                -indica qual aspecto de apresentação será ajustado
+
+        -Agrupando Seletores
+        ex:
+        ...
+        <style>
+            h1 {
+                font-family: Verdana;
+                color: darkblue;
+            }
+            h2 {
+                font-family: Verdana;
+                color: darkblue;
+            }
+            h3 {
+                font-family: Verdana;
+                color: darkblue;
+            }
+        </style>
+        ...
+
+        Agrupados:
+        ...
+        <style>
+        h1, h2, h3 {
+            font-family: Verdana;
+            color: darkblue;
+        }
+        </style>
+        ...
