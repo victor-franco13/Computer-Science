@@ -68,3 +68,52 @@ Professor: Luiz Gustavo
     -Posição do EOF indica o cenário a ser tratado:
         -Final do buffer: EOF na ultima posição
         -Final do arquivo de entrada: EOF nas demais posições
+
+    -Tratamento do EOF:
+        -SE prox está no fim do 1º buffer ENTÃO
+            -carrega o 2º buffer
+            -prox = inicio do 2º buffer
+
+        -SENÃO SE prox está no fim do 2º buffer ENTÃO
+            -carrega o 1º buffer
+            -prox = início do 1º buffer
+
+        -SENÃO // Fim do arquivo
+            -fim da análise léxica
+
+-Expressões Regulares (ER)
+    -Notação formal usada para especificar a estrutura
+    (padrões) dos tokens
+        -Possibilita um analisador léxico sem erros (estrutura precisa)
+        ex: string definida como uma cadeia de caracteres entre aspas
+            -não são todos os caracteres que são permitidos (ex: '\n')
+        ex: números reais em notação de ponto fixo (ex: 3.0 e 0.12)
+            -3. e .12 são aceitos em Fortran, mas não em Pascal
+
+    -Descreve as linguagens a partir de 3 operações sobre
+    símbolos de algum alfabeto:
+        -União: L U M = {s|s ∈ L ou s ∈ M}
+        -Concatenação: LM = {st|s ∈ L ou t ∈ M}
+        -Fecho Kleene: L*= U^i=0..∞ L
+
+-Processo Indutivo
+    -ER podem ser definidas a partir de expressões menores
+        -cada expressão r denota um linguagem L(r)
+
+    -Regras que forma a base das expressões regulares:
+        -ε é uma expressão regular e L(ε) é {ε}
+        -se a é um simbolo de Σ, então a é uma expressão regular e L(a) = {a}
+
+    -Regras que formam a parte indutiva das expressões regulares:
+        -(r)|(s) é uma expressão regular denotando L(r) U L(s)
+        -(r)(s) é uma expressão regular denotando L(r)L(s)
+        -(r)* é uma expressão regular denotando L(r)*
+        -se r é uma expressão regular, (r) também é e denota a mesma linguagem
+
+-Precedência dos operadores
+    -Precedência:
+        -Fecho (*)          //maior
+        -Concatenação
+        -União(|)           //menor
+
+    -Todos com associatividade à esquerda
