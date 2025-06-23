@@ -21,3 +21,50 @@ Professor: Luiz Gustavo
             -não garante efetividade dos resultados
 
 -Varredura (Scanner)
+    -Consiste na leitura da entrada (código fonte) para a
+    identificação dos lexemas (casamento de um padrão)
+        -Consome caractere a caractere da esquerda para direita
+
+    -Identificação correta de um lexema pode exigir a
+    leitura de 1 ou + caracteres a frente (lookahead)
+        ex: na linguagem Fortran, as palavras-chave não são
+        reservadas e os espaços são desconsiderados
+
+    -Técnicas especializadas de buffering são empregadas
+    para reduzir o custo da operação
+        -2 buffers para tratar lookaheads grandes com segurança
+        -Uso de "sentinelas" para evitar verificação de fim do buffer
+
+-Pares de buffer
+    -Adota 2 buffers de entrada de mesmo tamanho
+        -Relacionado com o tamanho do bloco do disco (ex:4096 bytes)
+
+    -Comando de leitura do sistema carrega todo o
+    buffer ao invés de um único caractere
+        -Buffers são carregados alternadamente
+        -Caractere especial EOF define fim do arquivo
+
+    -Abordagem adota 2 ponteiros:
+        -ini: marca o inicio do lexema atual
+        -prox: indica o proximo caractere a ser lido
+
+    -Podemos esgotar o espaço em buffer?
+        -Lexemas são geralmente pequenos
+            -1 ou 2 caracteres de lookahead são suficientes
+        -Problema na leitura de cadeias longas(> buffer)
+            -Linguagens que não tratam palavras-chave como reservadas
+            -Existência de lexemas maiores que o buffer (ex:literais)
+
+-Sentinelas
+    -Envolve incluir um caractere extra (sentinela) no fim de
+    cada buffer
+        -Geralmente é usado o caractere especial EOF
+        -Exige uma posição a mais na estrutura de armazenamento
+
+    -Visa reduzir a quantidade de testes a cada caractere lido
+        -Original: fim do buffer e qual caractere lido
+        -Sentinela: qual caractere lido
+
+    -Posição do EOF indica o cenário a ser tratado:
+        -Final do buffer: EOF na ultima posição
+        -Final do arquivo de entrada: EOF nas demais posições
