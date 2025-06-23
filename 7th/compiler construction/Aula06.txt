@@ -1,0 +1,23 @@
+Aula 6
+Professor: Luiz Gustavo
+
+
+-Lexema
+    -Erros léxicos
+        -Estratégias de recuperação podem ser usadas:
+            -Envolve transformações na entrada restante:
+                -Remover um caractere
+                -Inserir um caractere que falta
+                -Substituir um caractere por outros
+                -Transpor dois caracteres adjacentes
+
+        -"Modo pânico": remove caracteres até reconhecer o lexema
+
+        -Estratégia mais simples aplica uma unica transformação
+
+        -Estrategia mais geral busca encontrar o menor número de
+        transformações necessárias para obter um lexema válido
+            -estratégia muito dispendiosa
+            -não garante efetividade dos resultados
+
+-Varredura (Scanner)
