@@ -38,3 +38,14 @@ Professor: Daniel Furtado
             
             <button>Enviar</button>
         </form>
+
+    -Campo textual simples vs campo para senha
+    <input type="text">
+    <input type="password">
+
+    -Atributo value em campos textuais
+        -O atributo value em campos textuais pode ser utilizado para fornecer um
+        valor inicial, já preenchido, para o campo;
+            -Pode ser alterado
+            
+    
