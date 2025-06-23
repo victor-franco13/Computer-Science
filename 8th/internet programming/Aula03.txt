@@ -1,0 +1,40 @@
+Aula 3
+Professor: Daniel Furtado
+
+-Módulo 1: Fundamentos da HTML
+
+    -Formulário Simples em HTML
+        ex:
+        <form action="cadastra.php" method="post">
+            <div>
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" name="prodNome">
+            </div>
+            <div>
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="prodDesc">
+            </div>
+            <div>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="prodMarca">
+            </div>
+    
+            <button>Enviar</button>
+    </form>
+
+    -Outra Forma de Vincular os Rótulos aos Campos
+        -Outra maneira de associar corretamente os rótulos aos campos é inserindo
+        o elemento <input> como conteúdo do elemento <label>
+
+        -Neste caso é necessário utilizar o atributo for juntamente com o id
+
+        -Porém o atributo name continua sendo fundamental
+
+        ex:
+        <form action="cadastra.php" method="post">
+            <p><label>Produto: <input type="text" name="prodNome"></label></p>
+            <p><label>Descrição: <input type="text" name="prodDesc"></label></p>
+            <p><label>Marca: <input type="text" name="prodMarca"></label></p>
+            
+            <button>Enviar</button>
+        </form>
