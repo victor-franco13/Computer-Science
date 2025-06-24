@@ -1,0 +1,22 @@
+Aula 7
+Professor: Luiz Gustavo
+
+    -Definições Regulares:
+        -Seja Σ o alfabeto. Uma definição regular é
+        uma sequência de definições da forma:
+                -d1->r1
+                -d2->r2
+                -...
+                -dn->rn
+
+            -Cada di é um novo símbolo !∈ Σ U {d1,d2,...,di-1}
+            -Cada ri é uma expressão regular formada por
+            símbolos ∈ Σ U {d1,d2,...,di-1}
+
+        ex:
+            -Identificadores em C:
+                letra -> A|B|...|Z|a|b|...|z|_
+                digito -> 0|1|...|9
+                id-> letra_(letra_|digito)*
+
+                
