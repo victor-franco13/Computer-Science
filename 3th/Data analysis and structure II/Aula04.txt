@@ -2,3 +2,30 @@ Aula 4
 Professor: Renato Pimentel
 
 -Testes das aulas passadas
+
+-Grafos
+    -Algoritmos de busca
+        -O objetivo das buscas em grafos é explorar os mesmos, de uma
+        maneira bem determinada
+            -I.e. correspondem a processos sistemáticos de como caminhar por seus
+            vértices e arestas.
+
+        -As três principais formas de busca:
+            -Busca em profundidade
+            -Busca em largura
+            -Busca pelo menor caminho
+
+        -De modo geral, as operações de busca dependem do vértice inicial.
+            -O ponto de partida é um aspecto bastante importante da própria busca.
+            -Por exemplo, em uma busca pelo menor caminho, temos que saber qual
+            é o ponto de partida desse caminho.
+
+        -A busca pode precisar visitar todos ou apenas um subconjunto dos 
+        vértices.
+        
+        -Vários problemas em grafos podem ser resolvidos efetuando uma busca.
+
+            -Encontrar o caminho entre dois vértices conectados do grafo;
+            -Determinar o menor caminho entre dois vértices do grafo;
+            -Resolução de quebra-cabeças (labirintos);
+            -Determinar componentes conexas (fortemente ou não), etc.
