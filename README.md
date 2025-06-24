@@ -16,3 +16,5 @@ Códigos:
  p?: perguntas
  
  ex: exemplo
+
+ !(simbolo): negação
