@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Clientes</title>
+  </head>
+  <body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="cadastroCliente.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="origem" value="trabalho3">
+
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <div>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required minlength="2" maxlength="50" autofocus>
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+        </div>
+
+        <div>
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" required>
+        </div>
+
+        <div>
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required>
+        </div>
+
+        <div>
+          <label for="nascimento">Data de nascimento:</label>
+          <input type="date" id="nascimento" name="nascimento">
+        </div>
+
+        <div>
+          Sexo:
+          <input type="radio" id="masc" name="sexo" value="Masculino">
+          <label for="masc">Masculino</label>
+          <input type="radio" id="fem" name="sexo" value="Feminino">
+          <label for="fem">Feminino</label>
+        </div>
+
+        <div>
+          <label for="estadoCivil">Estado Civil:</label>
+          <input type="text" id="estadoCivil" name="estadoCivil">
+        </div>
+
+        <div>
+          <label for="estadoCivil">Main no Valorant:</label>
+          <input type="text" id="mainValo" name="mainValo" value="Omen o melhor agente pra clutch" readonly>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <div>
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" required>
+        </div>
+
+        <div>
+          <label for="tipologradouro">Tipo de Logradouro:</label>
+          <select id="tipologradouro" name="tipologradouro" required>
+             <option value="">Selecione um tipo de logradouro</option>
+            <option value="rua">Rua</option>
+            <option value="avenida">Avenida</option>
+            <option value="alameda">Alameda</option>
+            <option value="praca">Praça</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="logradouro">Logradouro:</label>
+          <input type="text" id="logradouro" name="logradouro" required>
+        </div>
+
+        <div>
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" required>
+        </div>
+
+        <div>
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" required>
+        </div>
+
+        <div>
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" name="estado" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações Adicionais:</legend>
+
+        <div>
+          <input type="checkbox" id="filmes" name="interesses[]" value="filmes" checked>
+          <label for="filmes">Filmes</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="informatica" name="interesses[]" value="informatica">
+          <label for="informatica">Informática</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="games" name="interesses[]" value="games">
+          <label for="games">Games</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="livros" name="interesses[]" value="livros">
+          <label for="livros">Livros</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="roupas" name="interesses[]" value="roupas">
+          <label for="roupas">Roupas</label>
+        </div>
+
+        <div>
+          <label for="infoComp">Informações complementares:</label>
+          <textarea id="infoComp" name="infoComp" rows="4" cols="50" placeholder="Adicione alguma informação sua"></textarea>
+        </div>
+
+        <div>
+          <label for="imagem">Anexar imagem:</label>
+          <input type="file" id="imagem" name="imagem">
+        </div>
+      </fieldset>
+
+      <div>
+        <button type="submit">Enviar Cadastro</button>
+      </div>
+    </form>
+  </body>
+</html>
