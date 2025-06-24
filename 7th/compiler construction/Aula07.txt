@@ -19,4 +19,53 @@ Professor: Luiz Gustavo
                 digito -> 0|1|...|9
                 id-> letra_(letra_|digito)*
 
-                
+    -Notação Estendida
+        -Extensões são adicionadas para melhorar a capacidade de
+        especificar padrões de cadeia
+            -Não fazem parte da notação convencional de expressões regulares
+            -Usadas na especificação de analisadores léxicos (ex:Lex)
+
+        -Extensões importantes:
+            -Operador +: representa o fecho positivo (uma ou mais instâncias)
+                -(r) denota a linguagem L(r)
+                -r*=r+|ε e r+=rr*
+
+            Operador ?: representa zero ou uma instância
+                -(r)? é equivalente a r|ε
+
+            Operador []: representa classes de caracteres
+                -[abc] é equivalente a a|b|c 
+                    -util para representar sequências de símbolos
+                        -[a-z] é equivalente a a|b|...|z
+
+    -Reconhecimento de Tokens
+        -Considere o fragmento de gramática:
+            -stmt -> if expr then stmt else stmt |
+                     if expr then stmt           | ε
+            -expr -> term relop term             | term
+            -term -> id                          | number
+
+        -Tokens são os simbolos terminais da gramática livre de contexto
+
+        -Devem ser reconhecido e retornados pelo analisador léxico
+            -Palabras-chave associadas a if, then e else
+            -Lexemas que casam com os padrões de relop, id e num
+
+        -Separadores (ws) e comentários devem ser removidos (caso especial)
+            -Não retorna token ao analisador sintático
+            -Provoca a reinicialização de análise léxica a partir do caractere seguinte
+
+        -Definições regulares dos padrões dos tokens:
+            -digito    ->   [0-9]
+            -digitos   ->   digito^+
+            -letra     ->   [A-Za-z]
+            -num       ->   digitos(.digitos)?(E[+-]?digitos)?
+            -id        ->   [letra_][digito letra_]*
+            -relop     ->   <|>|<=|>=|=|<>
+            -if        ->   if
+            -then      ->   then
+            -else      ->   else
+            -ws        ->   (' '|\t|\n)*
+
+
+    
