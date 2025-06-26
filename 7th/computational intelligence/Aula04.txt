@@ -1,0 +1,20 @@
+Aula 4
+Professora: Marcia Aparecida
+
+//fazer normalização é importante
+
+-Para determinado conjunto de dados sá a acurácia não é uma medida suficiente
+
+-O resultado geralmente será estatistica e não os pesos da rede
+
+-Se ficar ruim, podemos reinicializar os pesos, avaliar o nº de neuronios,
+as funçõoes da ativação, o nº de camadas ocultas
+    -Existem algoritmos que gerenciam esses hiperparâmentros
+
+-Número de épocas(t): é o nº de iterações; t=0, t=1 ...
+    a parada pode ser através do maxIT: 1000
+
+-A equação de alteração de peso: wi+1 = w1+ n * z * xi
+                                        n = taxa de aprendizado
+
+-Focando no Aprendizado Supervisionado 
