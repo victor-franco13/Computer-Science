@@ -69,5 +69,19 @@ for j<-2 to n
 
         Dai, f(n) = C1n + C2 (n-1) + C4 (n-1) + C5[(n(n-1))/2 - 1] + C6[(n(n-1))/2] + C7[(n(n-1))/2] + C8(n-1)
 
-        f(n) = (C5 + C6 + C7)
-    
+        f(n) = ((C5 + C6 + C7))/2 + n^2 + (C1 + C2 + C4 + (C5-C6-C7)/2 + C8) * n + (C2 + C4 + C5 + C8)
+
+        f(n) = a'n^2 + b'n + c', onde a', b', c' são constantes
+
+        -Caso Médio: Considerando que t1 = 1/2 o tempo da execução seria:
+
+        f(n) = a''n^2 + b''n + c''
+
+        1   for
+        2   {
+        3     Atribuições para n suficientemente grande
+        4   }
+        5   while
+        6   {
+        7     Linha 1 e 5 foram determinantes para analisar o algoritmo
+        8   }
