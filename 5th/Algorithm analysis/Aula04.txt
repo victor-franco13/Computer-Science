@@ -1,0 +1,51 @@
+Aula 4
+Professora: Marcia Aparecida
+
+Formalismos
+
+    Somas: Σ
+        -Propriedades
+        -Fórmulas fechadas
+
+    Recorrências
+        Definição: Uma recorrência é um conjunto de equações que
+        expressa os valores de uma função em termos da prória função
+
+        Há, pelo menos, duas equações:
+            Uma (ou mais) que expressa o caso base (trivial, condição de fronteira)
+            e outra que expressa o caso geral.
+
+            ex:
+            S(n)= 1, se n <= 1
+            S(n)= S(n-1) + n, se n > 1
+
+        Resolver a recorrência: encontrar a fórmula fechada (ff)
+        (estudar pelo livro: Projeto de algoritmo, Nivio Ziviani)
+
+            -Método da expansão(ff)
+            -Árvores de recursão(ff)                                     //notação assintótica (na)
+            -Teorema Master(na)
+            -Indução matemática(na)
+
+    Notação Assintótica
+        Definição: Dadas duas funções, f(n) e g(n), nos inteiros não negativos, f(n)
+        domina assintoticamente g(n), se existem constantes positivias; c>0 e n0, 
+        tais que g(n) <= cf(n), para todo n>=n0.
+        
+        Essa definição é a definição do limite assintótico superior, denotado por O.
+        Diz-se que g(n)=0(f(n))
+
+        ex: Mostre que g(n)= n^2-2n+1 tem limite superior assintótico em f(n)=n?
+
+        Mostrar que existem constantes positivas c>0 e n0, tais que para todo n >= n0,
+        g(n) <= cf(n), ou seja,
+
+        n^2 - 2n + 1 <= cn^2
+        -2n + 1 <= (c-1) n^2
+
+        Para n >= 1, o lado esquerdo desta desigualdade é sempre negativo. 
+        Então se c-1 >= 0, ou seja, c >= 1, a desigualdade é sempre verdadeira
+
+        Assim, para c=1 e n0=1
+
+        g(n) = O(n^2)
