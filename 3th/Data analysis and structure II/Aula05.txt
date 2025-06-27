@@ -57,4 +57,32 @@ Professor: Renato Pimentel
     vizinhos antes de se aprofundar na busca. Esse processo continua até 
     que:
         -O alvo de busca seja encontrado; ou
-        -
+        -Não existam mais vértices a serem visitados.
+
+    -O algoritmo usa o conceito de fila:
+        -O grafo é percorrido de maneira sistemática, primeiro marcando como
+        "visitados" todos os vizinhos de um vértice e em seguida começa a visitar
+        os vizinhos de cada vértice na ordem que eles foram marcados.
+        -Para realizar essa tarefa, uma fila é utilizada para administrar a visitação
+        dos vértices
+            -O primeiro vértice marcado (ou marcado a mais tempo) é o primeiro a
+            ser visitado
+
+    -Complexidade
+        -Considerando um grafo G(V,A), onde |V| é o número de vértices e |A|
+        é o número de arestas, a complexidade no pior caso é:
+            -Custo de inserção e remoção em fila: constante;
+            -Custo de enfileirar e remover todos os vértices uma vez: O(|V|);
+            -Custo de utilizar todas as arestas: O(|A|);
+            -Complexidade da busca no pior caso: O(|V|+|A|)
+
+    -Aplicações
+        -Encontrar todos os vértices conectados a apenas uma componente
+        conexa;
+        -Encontrar o menor caminho entre dois vértices;
+        -Testar se um grafo é bipartido;
+        -Roteamento: encontrar um número mínimo de hops em uma rede;
+            -Os hops são os vértices intermediários no caminho correspondete à
+            conexão.
+        -Encontrar o número mínimo de intermediários entre 2 pessoas.
+        
