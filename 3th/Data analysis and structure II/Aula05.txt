@@ -30,3 +30,20 @@ Professor: Renato Pimentel
         3 parametros acima, um contador de visitação. Trabalha de forma
         recursiva.
             -A recursão termina quando não houver mais vizinhos a serem visitados
+
+        -Complexidade
+            -Considerando um grafo G(V,A), onde |V| é o número de vértices e |A|
+            é um número de arestas, a complexidade no pior caso é:
+                -Custo de ir para cada vértice: O(|V|);
+                -Custo de transitar em cada aresta: O(|A|);
+                -Complexidade da busca no pior caso: O(|V| + |A|)
+
+        -Aplicações
+            -Encontrar componentes conexas e fortemente conexas;
+            -Ordenação topológica de um grafo;
+            -Procurar a saída de um labirinto;
+            -Verificar se um grafo é completamente conexo:
+                -por exemplo, se uma rede de computadores está funcionando
+                corretamente ou não;
+            -Implementar a ferramenta de preenchimento de cor em editores de
+            imagens
