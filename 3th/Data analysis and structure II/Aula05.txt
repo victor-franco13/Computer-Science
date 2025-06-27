@@ -1,2 +1,32 @@
 Aula 5
 Professor: Renato Pimentel
+
+-Busca em profundidade
+    -O funcionamento da busca em profundidade pode ser assim descrito:
+        -Partindo de um vértice inicial, a busca explora o máximo possível cada um
+        dos vizinhos de um vértice antes de retroceder (backtracking)
+            -Em ingles: depth first search (DFS)
+            -Esse tipo de busca se inicia em um vértice e se aprofunda nos vértices
+            vizinhos deste até encontrar um dos dois casos:
+                -O alvo da busca seja encontrado; ou
+                -Um vértice sem vizinhos ainda não visitados; ou
+                -O vértice passado como parametro foi encontrado;
+
+        -backtracking:
+            -O grafo é percorrido de maneira sistemática até que a busca falhe, ou se
+            encontre um vértice sem vizinhos.
+                -Nesse momento, entra em funcionamento o mecanismo de backtracking:
+                a busca retorna pelo mesmo caminho percorrido, visando encontrar um
+                caminho alternativo.
+
+        -A função que inicializa a busca - buscaProfundidade_Grafo() - recebe
+        três parametros:
+            -Grafo
+            -Vértice inicial da busca
+            -Array que marcará a ordem que cada vértice será visitado - 
+            correspondendo ao resultado da busca
+
+        -Uma segunda função, buscaProfundidade(), recebe, além dos mesmos
+        3 parametros acima, um contador de visitação. Trabalha de forma
+        recursiva.
+            -A recursão termina quando não houver mais vizinhos a serem visitados
