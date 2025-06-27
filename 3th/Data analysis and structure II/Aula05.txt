@@ -5,12 +5,11 @@ Professor: Renato Pimentel
     -O funcionamento da busca em profundidade pode ser assim descrito:
         -Partindo de um vértice inicial, a busca explora o máximo possível cada um
         dos vizinhos de um vértice antes de retroceder (backtracking)
-            -Em ingles: depth first search (DFS)
-            -Esse tipo de busca se inicia em um vértice e se aprofunda nos vértices
-            vizinhos deste até encontrar um dos dois casos:
-                -O alvo da busca seja encontrado; ou
-                -Um vértice sem vizinhos ainda não visitados; ou
-                -O vértice passado como parametro foi encontrado;
+    -Em ingles: depth first search (DFS)
+    -Esse tipo de busca se inicia em um vértice e se aprofunda nos vértices
+    vizinhos deste até encontrar um dos dois casos:
+        -O alvo da busca seja encontrado; ou
+        -Um vértice sem vizinhos ainda não visitados; ou
 
         -backtracking:
             -O grafo é percorrido de maneira sistemática até que a busca falhe, ou se
@@ -47,3 +46,15 @@ Professor: Renato Pimentel
                 corretamente ou não;
             -Implementar a ferramenta de preenchimento de cor em editores de
             imagens
+
+-Busca em largura
+    -O funcionamento da busca em largura pode ser assim descrito:
+        -Partindo de um vértice inicial, a busca explora todos os vizinhos de um
+        vértice. Em seguida, para cada vizinho, repete-se esse processo, visitando os
+        vértices ainda inexplorados
+    -Em ingles: breadth first search (BFS)
+    -Esse tipo de busca se inicia em um vértice e então visita todos os seus
+    vizinhos antes de se aprofundar na busca. Esse processo continua até 
+    que:
+        -O alvo de busca seja encontrado; ou
+        -
