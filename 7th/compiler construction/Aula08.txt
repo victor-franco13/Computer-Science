@@ -33,3 +33,58 @@ Professor: Luiz Gustavo
                         -estão associados às ações que devem ser realizadas pelo
                         analisador léxico
                         -simbolo *indica recuo do prox (tratamento do lookahead)
+
+            -Palavras-Chave vs Identificadores
+                -Diferenciar palavras-chave e identificadores pode
+                ser um problema
+                    -Palavras-chave casam com o padrão dos identificadores
+                    -Considerar as palavras-chave como reservadas ajuda
+                    no reconhecimento
+                        -palavras reservadas não podem ser identificadores
+
+                -Existem 2 formas de lidar com palavras reservadas:
+                    -Tratar palavras reservadas como identificador
+                    -Criar diagramas separados para cada palavra-chave
+
+                -Tratar palavras reservadas como identificador:
+                    -inicia tabela de simbolos com as palavras reservadas
+                    -consulta a tabela antes de incluir um novo lexema
+                        -se encontrar registro, retorna o nome do token
+                        -senão inclui o novo lexema e retorna Identificadores
+
+                    ex:
+                    X = getToken(lexema);
+
+                    if(X == NULL)
+                        return setID(lexema);
+                    else
+                        return X;
+
+                -Criar diagramas separados para cada palavra chave:
+                    -verifica se a cadeia terminou antes de associar o lexema ao
+                    token
+                        -para evitar erros prioriza o maior prefixo aceito
+                        ex:ifan é um identificador e não a palavra-chave if
+
+                    -se o lexema casar com 2 padrões, deve priorizar a palavra
+                    chave
+                    
+                    -variação que UNIFICA os diagramas IF e do ID:
+                        -unificação é uma das estratégias para lidar com vários
+                        diagramas durante o processo de reconhecimento
+
+                    p?: Como seriam os diagramas de transição para os
+                    demais tokens do nosso estudo de caso?
+                    -then, else, ws e num
+
+                    -then e else
+                        -já está sendo coberto pelo autômato da 1ª estratégia
+                        (palavras reservadas como identificadores)
+
+                        -2ª estratégia: similar ao diagrama do if
+
+                    -ws(separadores)
+                        -espaços em branco, tabulações e quebras de linha
+
+                    -constante numérica
+                        -num -> digitos (.digitos)? (E[+-]?digitos)?
