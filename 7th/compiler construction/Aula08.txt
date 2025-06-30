@@ -27,5 +27,9 @@ Professor: Luiz Gustavo
                     -Transições: arestas direcionais associadas à leitura de um ou +
                     símbolos do alfabeto
                         -provoca mudança de estado e avanço do prox
-                        
+
                 -Estados de aceitação indicam um lexema aceito
+                        -não possuem transição de saída
+                        -estão associados às ações que devem ser realizadas pelo
+                        analisador léxico
+                        -simbolo *indica recuo do prox (tratamento do lookahead)
