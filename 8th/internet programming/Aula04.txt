@@ -133,3 +133,79 @@ Professor: Daniel Furtado
             -Função de Pseudo-Classe :has()
                 -A função de pseudo-classe :has() permite slecionar elementos que tenham
                 outros elementos associados conforme seletor passado para a função has()
+
+                -Por exemplo, é possível selecionar um elemento pai com base em uma 
+                condição envolvendo os descendentes
+
+                -Outra possibilidade é selecionar um elemento qualquer com base em uma
+                condição envolvendo elementos irmãos
+                
+                ex: 
+                div:has( img){
+                    background-color: gray;
+                }
+                -Seleciona os elementos div que têm um descendente img, alterando a cor de
+                fundo desses div's para cinza
+
+            -Pseudo-elementos
+                -Permite selecionar uma parte específica de um elemento
+                -Sintaxe geral: elemento :: valor
+                ex:
+                p::first-line{
+                    text-transform: uppercase;
+                }
+
+                -Pseudo-Elementos ::after e ::before
+                    -O pseudo-elemento ::after representa um espaço para conteúdo localizado depois
+                    do conteúdo normal do elemento (mas ainda dentro do elemento)
+                    ex:
+                    p::after {
+                        content: 'exemplo after';
+                    }
+                    -Insere o texto 'exemplo after' como um pseudo-elemento depois do conteúdo
+                    do parágrafo
+
+                    -O pseudo elemento ::before representa um espaço antes do conteúdo
+                    ex:
+                    p::before {
+                        content: 'exemplo before';
+                    }
+                    -Insere o texto 'exemplo before' como um pseudo-elemento antes do conteúdo
+                    do parágrafo
+
+                    -Normalmente eles são utilizados em conjunto com a propriedade content para
+                    inserir conteúdo nesses espaços com CSS
+
+                -Observações sobre pseudo-elementos
+                    -A notação com 4 pontos (::) foi introduzida em atualizações da CSS
+                    
+                    -:: é a forma atualmente recomendada para pseudo-elementos, pois
+                    diferencia pseudo-elementos de pseudo-classes, uma vez que há diferença
+                    semântica significativa entre eles
+
+    -Ajustes textuais
+        -Tipos de fontes:
+            -Fonte Sans-serif
+                -Sem prolongamentos
+                ex: Arial, Verdana
+
+            -Fonte Serif
+                -Com prolongamentos
+                ex: Times New Roman
+
+            -Fonte Monospace
+                -Letras com mesma largura de exibição
+                ex: Courier New, Consolas
+
+        -Propriedades de ajuste de fonte
+            -font-family
+                -define a fonte em si
+                ex: font-family:Verdana, Arial, sans-serif
+
+            -font-size
+                -define o tamanho da fonte
+                ex: font-size: 20px
+
+            -font-style
+                -define o estilo da fonte
+                ex: font-style: italic 
