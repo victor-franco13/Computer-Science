@@ -1,0 +1,18 @@
+Aula 4
+Professor: Daniel Furtado
+
+-CSS
+    -Outros tipos de Seletores
+        -Além do seletor de elemento apresentado anteriormente, há varias outras
+        formas de indicar quais partes da página devem ser afetadas pela regra CSS
+
+        -Algumas dessas formas são:
+            -Seletor de ID
+            -Seletor de filho
+            -Seletor de descente
+            -Seletor de irmão adjacente
+            -Seletor de irmão geral
+            -Seletor de atributo
+            -Seletor de classe
+
+            
