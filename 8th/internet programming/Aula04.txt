@@ -209,3 +209,85 @@ Professor: Daniel Furtado
             -font-style
                 -define o estilo da fonte
                 ex: font-style: italic 
+
+            -font-weight
+                -define a espessura da letra
+                ex: font-weight: bold
+
+            -font-variant
+                -define variantes da fonte
+                ex: font-variant: small-caps
+
+            -font-stretch
+                -estica ou comprime a fonte
+                ex: font-stretch: expanded
+
+            -line-height
+                -define o espaçamento entre linhas
+                ex: line-height: 1.5
+
+            -text-align
+                -alinhamento horizontal do texto dentro da região de conteúdo
+                ex:
+                h1 {text-align: center}
+                p {text-align: justify}
+                p {text-align: right}
+
+            -vertical-align
+                -alinhamento vertical do texto
+                ex:
+                vertical-align: top
+                vertical-align: middle
+
+            -text-decoration
+                -decoração adicional
+                ex:
+                text-decoration: none
+                text-decoration: underline
+
+            -text-indent
+                -recuo de 1ª linha
+                ex:
+                text-indent: 30px
+
+            -text-transform
+                -controle de maiúsculas e minúsculas
+                ex:
+                text-transform: uppercase
+                text-transform: lowercase
+                text-transform: capitalize
+
+            -color
+                -define a cor do texto
+                ex: color:green
+
+    -Unidades de tamanho da CSS
+        -Unidades de tamanho absoluto
+            -A unidade px (pixels) é a unidade de tamanho absoluto mais Comum
+            -Tamanhos absolutos não dependem de tamanhos definidos no elemento pai
+            -Além disso, ao definir um tamanho utilizando px, o tamanho não será afetado por
+            eventual mudança no tamanho de fonte realizada pelo usuário nas configurações
+            do navegador (portanto, os tamanhos definidos pelo usuário serão deprezados)
+            -Devem ser utilizados com cautela
+
+        -Unidades de tamanho relativo
+            -Podem depender de outros tamanhos e configurações como aquelas definidas
+            pelo usuário no navegador, do tamanho definido no elemento pai, do tamanho da
+            viewport (região visivel da página no navegador) etc.
+
+        -Unidades de tamanho relativo mais comuns
+            -em - relativo ao tamanho da fonte corrente (herdado do elemento pai)
+                -2em = dobro da fonte corrente
+                ex:
+                .medio {
+                    font-size: 16px;
+                }
+                
+                .grande {
+                font-size: 2em;
+                }
+                
+            -rem - relativo ao tamanho da fonte do elemento raiz (<html>)
+                -2rem = dobro do tamanho da fonte do elemento raiz
+
+            slide 64
