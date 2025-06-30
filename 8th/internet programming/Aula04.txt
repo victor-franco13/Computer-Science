@@ -15,4 +15,121 @@ Professor: Daniel Furtado
             -Seletor de atributo
             -Seletor de classe
 
+        -Seletor de ID (#idDoElemento)
+            O seletor de ID pode ser utilizado quando se deseja aplicar estilos a apenas
+            um elemento em particular. Utiliza-se # seguido do id do elemento
+
+            ex:
+            <style>
             
+                #par1 {
+                    text-align: center;
+                    color: red;
+                }
+
+            </style>
+
+            <body>
+
+                <p id="par1">Parágrafo afetado</p>
+                
+                <p>Parágrafo não afetado</p>
+
+            </body>
+
+            //Afeta apenas o elemento que tem o id indicado no seletor.
+            Vale lembrar que os id's devem ser únicos na página.
+
+        -Seletor de Filho (x > y)
+            -O seletor de filho tem a sintaxe x>y e afeta apenas os
+            elementos y que são filhos de elementos x
+
+        -Seletor de Descendente (x y)
+            -Afeta os elementos y que estão dentro de elementos x, mesmo
+            que tenha outros elementos aninhados entre eles
+
+        -Seletor de Irmão Adjacente (x + y)
+            -Afeta todo elemento y que aparece imediatamente depois de x
+
+        -Seletor de Irmão Geral (x ~ y)
+            -Afeta todos os elementos y que são irmãos de x e aparecem depois de x
+
+        -Seletor de atributo x[atributo]
+            -Seleciona elementos de acordo com alguma condição
+            envolvendo seus atributos
+
+        -Seletor de Classe
+            -O seletor de classe é um dos tipos de seletores mais comuns
+            -Ideal para situações onde é necessário aplicar os estilos mais de uma vez
+            -Primeiramente, deve-se criar uma classe de estilos CSS com os estilos
+            desejados. Utiliza-se o caractere "ponto" seguido do nome da classe:
+            
+                .minhaClasseCSS(
+                    /* declarações CSS */
+                )
+            -Posteriormente, aplica-se os estilos da classe no elemento desejado
+            utilizando o atributo class do elemento:
+
+                <elemento class="minhaClasseCSS">
+
+            -É possível criar uma classe que poderá ser aplicada a apenas
+            um determinado tipo de elemento
+
+            -Classes específicas de elementos nos dá a possibilidade de definir mais de uma
+            classe utilizando o mesmo nome.
+            
+            -É possível utilizar outros seletores em conjunto com classes
+
+        -Referenciando multiplas classes
+            -É possível aplicar os estilos de múltiplas classes em um elemento. Basta
+            utilizar um espaço para separa os nomes das classes no atributo class
+
+        -Seletores com Pseudo-Classes
+            -Uma pseudo-classe permite alterar o estilo de um elemento caso ele esteja
+            em um estado particular
+            -Por exemplo, é possível alterar o estilo dos links que já foram visitados ou o
+            estilo dos campos de formulário com conteúdo inválido.
+            -Sintaxe: seletor:pseudo-classe
+
+            -Pseudo-Classes Comumente Utilizadas com Links
+                :link
+                    -Define o estilo inicial do link
+                    ex: a:link{color:blue;}
+
+                :visited
+                    -Define os estilos de link já visitados
+                    ex: a:visited {color:gray;}
+
+                :hover
+                    -Define o estilo de exibição do elemento quando o
+                    ponteiro do mouse está sobre ele
+                    ex: a:hover {text-decoration:none;}
+
+                :active
+                    -Define o estilo de exibição do elemento quando
+                    ativado (botão do mouse pressionado sobre ele)
+                    ex: a:active, p:active {color:gray;}
+
+                :valid
+                    -Define o estilo de campos de formulário quando
+                    estão no estado válido (conteúdo apropriado)
+                    ex: input:valid {color:green;}
+                
+                :invalid
+                    -Define o estilo de campos quando estão no estado
+                    inválido (conteúdo no formato incorreto)
+                    ex: input: invalid {color:red}
+
+                :checked
+                    -Define o estilo de campos de tipo radio, checkbox 
+                    ou option quando selecionado
+                    ex: radio:checked {color:gray;}
+
+                :focus
+                    -Define o estilo do campo quando estiver em foco
+                    (campo em edição)
+                    ex: input: focus {background-color:gray;}
+
+            -Função de Pseudo-Classe :has()
+                -A função de pseudo-classe :has() permite slecionar elementos que tenham
+                outros elementos associados conforme seletor passado para a função has()
