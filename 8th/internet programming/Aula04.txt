@@ -286,8 +286,25 @@ Professor: Daniel Furtado
                 .grande {
                 font-size: 2em;
                 }
-                
+
             -rem - relativo ao tamanho da fonte do elemento raiz (<html>)
                 -2rem = dobro do tamanho da fonte do elemento raiz
+                ex:
+                html {
+                font-size: 14px;
+                }
 
-            slide 64
+                .medio {
+                font-size: 16px;
+                }
+                
+                .grande {
+                font-size: 2rem;
+                }
+
+        -Outras unidades de tamanho relativo
+            -% - em geral, relativo ao elemento pai
+                -widht:50% - define a largura em 50% da largura do container
+
+            -vh - relativo à altura da viewport (viewport height)
+                -30vh corresponde a 30% da altura da viewport
