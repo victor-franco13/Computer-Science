@@ -1,2 +1,31 @@
 Aula 8
 Professor: Luiz Gustavo
+
+-Analise léxica
+    -Reconhecimento de tokens
+        -Definições regulares dos padrões dos tokens:
+            -digito    ->   [0-9]
+            -digitos   ->   digito^+
+            -letra     ->   [A-Za-z]
+            -num       ->   digitos(.digitos)?(E[+-]?digitos)?
+            -id        ->   [letra_][digito letra_]*
+            -relop     ->   <|>|<=|>=|=|<>
+            -if        ->   if
+            -then      ->   then
+            -else      ->   else
+            -ws        ->   (' '|\t|\n)*
+
+        -Diagramas de transição
+            -Fluxogramas usados no reconhecimento dos tokens
+                -Muito parecido com os autômatos finitos
+
+                -Gerados a partir dos padrões dos tokens
+                    -Estados: nós que representam as condições que podem ocorrer
+                    durante a procura de lexemas que casem com um padrão
+                        -possui um estado inicial e um ou mais estados finais ou de aceitação
+
+                    -Transições: arestas direcionais associadas à leitura de um ou +
+                    símbolos do alfabeto
+                        -provoca mudança de estado e avanço do prox
+                        
+                -Estados de aceitação indicam um lexema aceito
