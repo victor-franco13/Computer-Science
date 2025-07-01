@@ -308,3 +308,10 @@ Professor: Daniel Furtado
 
             -vh - relativo à altura da viewport (viewport height)
                 -30vh corresponde a 30% da altura da viewport
+
+            -vw - relativo à largura da viewport (viewport width)
+                -100vw corresponde a 100% da largura da viewport
+
+            -ch - relativo à largura de um caractere utilizando a fonte do elemento
+                -widht: 10ch - define a largura para comportar até 10 caracteres
+                
