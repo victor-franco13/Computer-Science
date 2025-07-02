@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+
+        legend {
+            color: #3498db;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-right: 10px;
+            color: #2c3e50;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+        }
+
+        input[required] {
+            background-color: #e8f4fc;
+        }
+
+        input:invalid {
+            background-color: #ffebee;
+            border-color: #e74c3c;
+        }
+
+        input:valid {
+            background-color: #e8f5e9;
+            border-color: #2ecc71;
+        }
+
+        input:invalid + label::after {
+            content: " ✖";
+            color: #e74c3c;
+        }
+
+        input:valid + label::after {
+            content: " ✓";
+            color: #2ecc71;
+        }
+
+        textarea::placeholder {
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* ID selector example */
+        #mainValo {
+            font-weight: bold;
+            color: #9b59b6;
+        }
+
+        /* Class selector example */
+        .checkbox-group {
+            display: inline-block;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="cadastroCliente.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="origem" value="trabalho3">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div>
+                <input type="text" id="nome" name="nome" required minlength="2" maxlength="50" autofocus>
+                <label for="nome">Nome:</label>
+            </div>
+
+            <div>
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+            </div>
+
+            <div>
+                <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+                <label for="cpf">CPF:</label>
+            </div>
+
+            <div>
+                <input type="number" id="idade" name="idade" required min="18" max="120">
+                <label for="idade">Idade:</label>
+            </div>
+
+            <div>
+                <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000">
+                <label for="telefone">Telefone:</label>
+            </div>
+
+            <div>
+                <input type="date" id="nascimento" name="nascimento">
+                <label for="nascimento">Data de nascimento:</label>
+            </div>
+
+            <div>
+                Sexo:
+                <input type="radio" id="masc" name="sexo" value="Masculino">
+                <label for="masc">Masculino</label>
+                <input type="radio" id="fem" name="sexo" value="Feminino">
+                <label for="fem">Feminino</label>
+            </div>
+
+            <div>
+                <input type="text" id="estadoCivil" name="estadoCivil">
+                <label for="estadoCivil">Estado Civil:</label>
+            </div>
+
+            <div>
+                <input type="text" id="mainValo" name="mainValo" value="Omen o melhor agente pra clutch" readonly>
+                <label for="mainValo">Main no Valorant:</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+
+            <div>
+                <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000">
+                <label for="cep">CEP:</label>
+            </div>
+
+            <div>
+                <select id="tipologradouro" name="tipologradouro" required>
+                    <option value="">Selecione um tipo de logradouro</option>
+                    <option value="rua">Rua</option>
+                    <option value="avenida">Avenida</option>
+                    <option value="alameda">Alameda</option>
+                    <option value="praca">Praça</option>
+                </select>
+                <label for="tipologradouro">Tipo de Logradouro:</label>
+            </div>
+
+            <div>
+                <input type="text" id="logradouro" name="logradouro" required>
+                <label for="logradouro">Logradouro:</label>
+            </div>
+
+            <div>
+                <input type="text" id="bairro" name="bairro" required>
+                <label for="bairro">Bairro:</label>
+            </div>
+
+            <div>
+                <input type="text" id="cidade" name="cidade" required>
+                <label for="cidade">Cidade:</label>
+            </div>
+
+            <div>
+                <input type="text" id="estado" name="estado" required>
+                <label for="estado">Estado:</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações Adicionais:</legend>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="filmes" name="interesses[]" value="filmes" checked>
+                <label for="filmes">Filmes</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="informatica" name="interesses[]" value="informatica">
+                <label for="informatica">Informática</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="games" name="interesses[]" value="games">
+                <label for="games">Games</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="livros" name="interesses[]" value="livros">
+                <label for="livros">Livros</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="roupas" name="interesses[]" value="roupas">
+                <label for="roupas">Roupas</label>
+            </div>
+
+            <div>
+                <textarea id="infoComp" name="infoComp" rows="4" cols="50" placeholder="Adicione alguma informação sua"></textarea>
+                <label for="infoComp">Informações complementares:</label>
+            </div>
+
+            <div>
+                <input type="file" id="imagem" name="imagem">
+                <label for="imagem">Anexar imagem:</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit">Enviar Cadastro</button>
+        </div>
+    </form>
+</body>
+
+</html>
