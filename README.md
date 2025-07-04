@@ -18,3 +18,5 @@ Códigos:
  ex: exemplo
 
  !(simbolo): negação
+
+ $$: atençao/prova
