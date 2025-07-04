@@ -1,0 +1,88 @@
+Aula 7
+Professor: Renato Pimentel
+
+Árvore geradora mínima
+
+    -Dado um grafo G(V,A) com n ≡ |V| vértices, uma árvore geradora
+    (em inglês, spanning tree) é um subgrafo T(V, At) contendo todos os
+    n vértices do grafo original, além de um subconjunto At ⊆ A com
+    |At| = n - 1 arestas que permitam a conexão entre tais vértices.
+        -O grafo G deve ser conexo;
+        -Tal subgrafo T é acíclico - daí o termo árvore.
+
+    -Se o grafo, além de conexo, é ponderado, sua árvore geradora mínima
+    (AGM) - em inglês, minimum spanning tree - á a árvore geradora cujo
+    custo (em termos da soma dos pesos das arestas) é o menor possível.
+
+        -Além do grafo ser conexo e ponderado, deve ser não-direcionado
+
+        -Como todos os vértices estão conectados entre si, o cálculo da árvore
+        geradora independe do vértice inicial.
+
+        -O problema da árvore geradora pode ser resolvido usando uma
+        estratégia que contrói a árvore incrementalmente;
+            
+            -A partir de um grafo G(V,A), começa-se com uma árvore T, com um
+            vértice e nenhuma aresta (grafo trivial);
+            
+            -Define-se a franja de T como o conjunto de todas as arestas (u,v) de
+            A tais que u ∈ T mas v !∈ T (i.e. arestas conectando um vértice na
+            árvore com outro fora).
+        
+        -Passo geral:
+            -Enquanto a franja não estiver vazia:
+                -tome uma aresta (u,v) da franja e troque T por T + (u,v)
+
+            -Ao final, processo termina com franja vazia.
+                -Se |Vt| = |V|, o grafo é conexo. Caso contrário, Vt é isolado e
+                encontrou-se uma componente conexa.
+
+    -Existem dois algoritmos clássicos para obter soluções ótimas para a
+    árvore geradora mínima - quando a aresta da franja é a de menor peso:
+        -Algoritmo de Prim
+        -Algoritmo de Kruskal
+
+    -Ambos são gulosos: a cada etapa, fazem a escolha melhor possível no
+    momento, dentre as várias possibilidades.
+
+    -Diferença entre eles está na regra usada para encontrar as arestas que
+    farão parte da árvore.
+
+    -Algortimo de Prim
+        
+        -Parte de um vértice inicial;
+        -A cada iteração, busca a aresta de menor peso que conecte um vértice
+        da árvore a outro que ainda não esteja na mesma.
+        -O novo vértice é adicionado a árvore, e repete-se o processo;
+        -O algoritmo prossegue até que:
+            -Todos os vértices façam parte da árvore;
+            -Não se pode encontrar uma aresta que satisfaça essa condição(grafo
+            desconexo).
+
+        $$ OLHAR EXEMPLO NOS SLIDES
+
+        -Complexidade
+            -Considerando um grafo G(V,A), onde |V| é o número de vértices e |A|
+            é o número de arestas, a complexidade no pior caso é O(|V| x|A|).
+                -Como |A| é proporcional a |V|^2, o custo é O(|V|^3).
+            
+            -A eficiência depende da forma usada para procurar a aresta de menor
+            peso.
+                -Usando uma fila de prioridades para as arestas, o custo pode ser
+                reduzido para O(|A|log|V|).
+
+    -Algoritmo de Kruskal
+    
+        -Considera cada vértice como uma árvore independente;
+        -A cada iteração, o algoritmo procura a aresta de menor peso que conecta duas árvores diferentes; Os vértices das árvores selecionadas
+        passam a fazer parte de uma mesma árvore;
+        -O algoritmo prossegue até que:
+            -Todos os vértices façam parte da árvore;
+            -Não se pode encontrar uma aresta que satisfaça essa condição(grafo
+            desconexo).
+
+    -Diferença entre ambos os algoritmos
+        -O algortimo de Prim se inicia com um vértice e cresce uma única
+        árvore a partir dele;
+        -O algoritmo de Kruskal constrói uma floresta (várias árvores) ao longo
+        do tempo, e são unidas ao final do processo.
