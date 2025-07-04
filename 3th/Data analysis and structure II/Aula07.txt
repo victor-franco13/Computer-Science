@@ -63,7 +63,7 @@ Professor: Renato Pimentel
 
         -Complexidade
             -Considerando um grafo G(V,A), onde |V| é o número de vértices e |A|
-            é o número de arestas, a complexidade no pior caso é O(|V| x|A|).
+            é o número de arestas, a complexidade no pior caso é O(|V|x|A|).
                 -Como |A| é proporcional a |V|^2, o custo é O(|V|^3).
             
             -A eficiência depende da forma usada para procurar a aresta de menor
@@ -86,3 +86,15 @@ Professor: Renato Pimentel
         árvore a partir dele;
         -O algoritmo de Kruskal constrói uma floresta (várias árvores) ao longo
         do tempo, e são unidas ao final do processo.
+
+        $$ OLHAR EXEMPLO NOS SLIDES
+
+        -Complexidade 
+            -Considerando um grafo G(V,A), onde |V| é o número de vértices e |A|
+            é o número de arestas, a complexidade no pior caso é O(|V|x|A|).
+                -Como |A| é proporcional a |V|^2, o custo é O(|V|^3).
+
+            -A eficiência depende da forma usada para procurar a aresta de menor 
+            peso.
+                -Usando uma estrutura de dados união-busca (Union & Find), o custo
+                pode ser reduzido para O(|A|log|V|)
