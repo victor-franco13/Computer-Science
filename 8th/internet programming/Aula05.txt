@@ -1,3 +1,135 @@
 Aula 5
 Professor: Daniel Furtado
 
+-Fundamentos da CSS
+
+    -Ajustes de Tamanho, Margem, Padding, Borda e Background
+
+        -CSS Box Model
+            -Na HTML, a maioria dos elementos tem a apresentação estruturada em um
+            formato de caixa (box), onde há uma região para a exibição de conteúdo,
+            outra para bordas, outra para margens etc.
+
+            -Todas essas partes podem ser ajustadas com CSS utilizando um modelo
+            que é conhecido como CSS Box Model
+
+                -Content box
+                    -Região de conteúdo do elemento
+
+                -Padding do elemento
+                    -Envolve o conteúdo
+                    -Afetado pela cor de fundo
+                    -Dentro da bordas
+
+                -Borda do elemento
+                    -Envolve o Padding
+
+                -Margem do elemento
+                    -Externo à borda
+                    -Transparente
+
+                -Outline do elemento
+                    -Externo à borda
+                    -Não toma espaço próprio
+
+                -Border box
+                    -Região incluindo borda, padding e conteúdo
+
+            -É possível fornecer até 4 valores para a prorpiedade margin:
+                -margin: 20px;                  (ajusta todas as margens em 20px)
+                -margin: 20px 50px 80px 100px;  (superior, direita, inferior e esquerda)
+                -margin: 20px 40px 20px;        (superior, laterais, inferior)
+                -margin: 20px 40px;             (superior/inferior e laterais)
+
+            -A mesma sentaxe se aplica à propriedade padding
+
+            -Há também propriedades para ajustes individual:
+                -margin-left, margin-right, margin-top e margin-bottom
+                -padding-left, ""
+
+            -Ajuste de Borda
+                -A propriedade border permite definir a borda por completo (4 lados)
+                -Sintaxe mais comum:
+                    -border: espessura estilo cor
+                    -Estilos possíveis: solid, dotted, dashed, double ou none
+                    -A ordem dos valores não importa
+                    ex:
+                        border: 1px solid blue;
+
+            -Visualização no navegador
+                -Durante o desenvolvimento do layout da página, pode ser necessário
+                verificar os tamanhos das regiões de conteúdo, margens, paddings e bordas
+
+                -Esses tamanhos podem ser conferidos no próprio navegador
+
+            -Ajustes de Largura e Altura
+                -Para definir a largura e altura de um elemento pode-se utilizar as
+                propriedades width e height
+                -Na maioria dos casos, width e height definem tamanhos para a região de conteúdo do elemento (abordagem padrão)
+                    -Largura total = larg. conteúdo + margens + bordas + padding
+                    -Esse comportamento pode ser alterado com a propriedade box-sizing
+
+                -height não altera a altura de alguns elementos de linha (<span>,<a> etc.)
+
+            -Propriedade box-sizing
+                -Altera o modo em que a largura e altura do elemento é calculada
+                    -box-sizing: content-box
+                        -Valor padrão para a maioria dos elementos (conforme exemplo anterior)
+                        -Ao definir width, estamos definindo a largura da região de conteúdo (content box)
+                        -A largura total do elemento será: width + bordas + paddings + margens
+                    
+                    -box-sizing: border-box
+                        -O cálculo da largura/altura inclui os tamanhos das bordas e padding (mas não as margens)
+                        -Ao definir a largura com width, estamos definindo, na verdade, a largura da caixa de
+                        conteúdo em conjunto com a borda e o padding (largura da border box)
+                        -A largura total será: width + margens
+                    
+                -Elementos com box-sizing padrão diferentes
+                    -A maioria dos elementos utiliza, por padrão, box-sizing: content-box
+                    -Porém há elementos que utilizam, por padrão, box-sizing: border-box,
+                    como é o caso do elemento <button>
+                    -Utilizar elementos com box-sizing diferentes no layout pode resultar em
+                    inconsistências visuais (veja exemplo no próximo slide)
+
+                -Sobreposição de margens
+                    -Margens entre dois elementos de bloco vizinhos não se somam
+                    -Em vez disso, prevalece a maior delas
+                    -Esse efeito é conhecido como sobreposição de margens (margin collapsing)
+
+                -Outros ajustes de tamanho
+                    -Além das propriedades width e height, há também propriedades para
+                    definir a largura mínima, a largura máxima, a altura mínima e a altura
+                    máxima de um elemento:
+                        -min-widht, max-widht
+                        -min-height, max-height
+
+                    -Tais propriedades são especialmente importantes em layouts reponsivos
+                    -Outros valores possíveis para propriedades de ajuste de tamanho incluem:
+                        -max-content, min-content e fit-content 
+
+                -Borda e Background Arredondados
+                    -border-radius permite arredondar os cantos da borda e do background dos elementos
+                    -O valor da propriedade indica o raio da curvatura
+
+                -Caixa de sombreamento com box-shadow
+                    -O box-shadow não ocupa espaço próprio (como aconte com a borda) e não
+                    interfere no layout.
+
+                -Ajustes de fundo - Background
+                    background-color
+                    -permite ajustar a cor de fundo do elemento (conteúdo e paddings)
+                    ex:
+                    div {background-color:gray;}
+
+                    background-image
+                    -permite inserir uma imagem de fundo para o elemento
+                    ex:
+                    body {background-image: url("images/bgImage.png");}
+
+    -Exibição e Posicionamento
+
+        -Propriedade display
+            -Altera o modo de apresentação do elemento
+            -Um elemento de linha pode ser exibido como bloco e vice-versa
+            -Possibilita criar layouts flexíveis (próximo módulo)
+            
