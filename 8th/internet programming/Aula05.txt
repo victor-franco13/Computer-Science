@@ -132,4 +132,95 @@ Professor: Daniel Furtado
             -Altera o modo de apresentação do elemento
             -Um elemento de linha pode ser exibido como bloco e vice-versa
             -Possibilita criar layouts flexíveis (próximo módulo)
-            
+            -Também é possível ocultar um elemento, removendo-o do layout
+            -Alguns valores possíveis:
+                -none, block, inline, inline-block
+                -flex, grid, inline-flex, inline-grid
+
+                display: none
+                    -oculta completamento o elemento, removendo-o do layout
+                    -libera o espaço para outros elementos próximos
+
+                display: block
+                    -faz com que o elemento tenha exibição em nível de bloco (como o <div>)
+                    -elementos de bloco são exibidos em nova linha e coupam toda a largura disponível
+
+                display: inline
+                    -faz com que o elemento seja exibido em nível de linha (como o <span>)
+                    -elementos de linha não começam obrigatoriamente com quebra de linha e só
+                    ocupam o espaço necessário para exibição de conteúdo
+                    -width e height não terão efeito em alguns elementos
+                    -margens e paddings verticais de alguns elementos não são respeitados
+                    
+                display: inline-block
+                    -exibição em nível de linha, mas com a possibilidade de usar width e height
+                    -margens e paddings superiores e inferiores respeitados
+
+        -Propriedade visibility
+            -mostra ou oculta um elemento sem alterar o layout
+
+                visibility: visible
+                    -elemento visível, aparecendo normalmente
+
+                visibility: hidden
+                    -o elemento será ocultado, mas continuará ocupando espaço no layout
+
+                visibility: collapse
+                    -permite ocultar linhas e colunas de tabelas sem alterar o layout geral
+                    -as demais linhas e colunas permanecem com seus tamanhos originais
+
+        -Propriedade float
+            -Posiciona o elemento no lado esquerdo ou direito de seu container
+            -Permite que o texto e outros elementos se posicionem à sua volta
+            -Alguns valores
+                -left                   elemento "flutua" no lado esquerdo do container
+                -right                  elemento "flutua" no lado direito do container
+                -none                   elemento não "flutua"
+
+        -Propriedade overflow
+            -Elementos com tamanhos fixados (width, height) podem ter o conteúdo
+            extrapolando os limites da borda (caso o conteúdo não caiba no elemento)
+
+            -A propriedade overflow permite definir como o conteúdo será apresentado
+            nesses casos
+
+            -Propriedade abreviada de overflow-x e overflow-y
+                -Alguns valores
+                    -visible                    conteúdo sempre visivel, ainda que fora dos limites (padrão)
+                    -hidden                     conteúdo cortado, se necessário, para caber no espaço
+                    -scroll                     barras de rolagens são sempre apresentadas
+                    -auto                       barras de rolagens apresentadas apenas quando necessário
+
+        -Propriedade position
+            -Define como o elemento é posicionado na página
+            -Normalmente é utilizado em conjunto com top, left, right, e bottom
+                -Valores possíveis
+                    -static
+                    -relative
+                    -absolute
+                    -fixed
+                    -sticky
+
+            -O elemento é dito posicionado quando position tem valor diferente de static
+
+            position: static
+                -Valor padrão
+                -Elemento posicionado de acordo com fluxo normal do documento
+
+            position: relative
+                -Permite posicionar o elemento de maneira relativa à sua posição normal
+                -O elemento é primeiramente posicionado de acordo com o fluxo normal. Em
+                seguida, é deslocado da sua posição com top, left, right e bottom
+                -O deslocamento não afeta a posição dos elementos à volta
+
+            position: absolute
+                -O elemento é removido do fluxo normal - portanto, não ocupa espaço no layout
+                -O elemento é posicionado sobre o restante do conteúdo utilizando as
+                propriedades top, left, right e/ou bottom
+                -O posicionamento é relativo ao ancestral mais próximo posicionado*, se houver
+                    -Caso contrário, o posicionamento é relativo ao elemento raiz (<html>)
+                -Pode ser utilizado para centralizar um elemento de bloco
+                    *O ancestral mais próximo posicionado é o primeiro elemento acima na hierarquia (pai, avô etc.)
+                    que tem a propriedade position com valor diferente de static
+
+            position: fixed
