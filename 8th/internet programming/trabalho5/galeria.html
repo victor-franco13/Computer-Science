@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site da clinica ABC Health">
+    <title>Clinica ABC Health - Galeria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #0078d7;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+        
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            padding: 15px 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            background-color: white;
+            width: 70%;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #0078d7;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .galeria-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .galeria-item {
+            text-align: center;
+        }
+        
+        .galeria-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .galeria-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+        
+        footer address p {
+            margin: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .galeria-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                width: 90%;
+            }
+            .galeria-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .galeria-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Clinica ABC Health</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>    
+        <h2>Nossa Estrutura</h2>
+        <div class="galeria-container">
+            <div class="galeria-item">
+                <img src="imagens/imagem1.jpg" alt="Recepção da clínica">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem2.jpg" alt="Sala de espera">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem3.png" alt="Consultório médico">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem4.jpg" alt="Equipamentos modernos">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem5.jpg" alt="Laboratório de análises">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem6.jpg" alt="Corredor da clínica">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem7.jpg" alt="Sala de exames">
+            </div>
+            <div class="galeria-item">
+                <img src="imagens/imagem8.jpg" alt="Área de descanso">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <address>
+            <p>João Naves de Avila, Santa Monica, Uberlandia</p>
+        </address>
+    </footer>
+</body>
+
+</html>
