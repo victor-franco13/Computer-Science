@@ -224,3 +224,5 @@ Professor: Daniel Furtado
                     que tem a propriedade position com valor diferente de static
 
             position: fixed
+                -Elemento removido do layout e posicionado com relação à viewport utilizando
+                top, left, rigth e bottom
