@@ -100,7 +100,7 @@ Professor: Daniel Furtado
                     -Além das propriedades width e height, há também propriedades para
                     definir a largura mínima, a largura máxima, a altura mínima e a altura
                     máxima de um elemento:
-                        -min-widht, max-widht
+                        -min-width, max-width 
                         -min-height, max-height
 
                     -Tais propriedades são especialmente importantes em layouts reponsivos
@@ -226,3 +226,31 @@ Professor: Daniel Furtado
             position: fixed
                 -Elemento removido do layout e posicionado com relação à viewport utilizando
                 top, left, rigth e bottom
+                -O elemento é posicionamento sobre os demais
+                -A posição do elemento não se altera com a rolagem da página
+                -Quando impresso, aparecerá na mesma posição em todas as páginas
+                -Geralmente utilizado quando se desejar posicionar algo de maneira fixa na tela,
+                sobre o restante do conteúdo, como painéis de avisos sobre cookies, janelas
+                modais etc.
+
+        -Propriedade transform
+            -Permite mover, rotacionar, torcer e escalonar um elemento
+                ex:
+                transform:translateX(50px);                 move o elemento 50px na horizontal (p/direita)
+                transform:translateY(50px);                 move o elemento 50px na vertical (p/baixo)
+                transform:translate(30px,10px);             move 30px na horizontal e 10px na vertical
+                transform:rotate(45deg);                    rotaciona o elemento em 45 graus
+                transform: scale(2);                        dobra o tamanho nas duas direções
+
+            -Quando utilizada em conjunto com posicionamento absoluto/fixo, a propriedade
+            transform permite centralizar totalmente um elemento na página/viewport
+                -Porém o elemento centralizado é removido do layout e aparecerá sobre os demais
+
+        -Centralizando na Horizontal com width e margin
+            -Uma forma de centralizar horizontalmente um elemento de bloco, sem
+            removê-lo do layout, é utilizando as propriedades width e margin
+            -Deine-se uma largura com width e coloca-se a margens laterais em auto
+            -Com as margens laterais em auto, o navegador ajustará os valores
+            igualmente para preencher o espaço restante, resultando na centralização
+            -Para centralizar apenas o texto dentro de um elemento, pode-se utilizar
+            apenas text-aling: center
