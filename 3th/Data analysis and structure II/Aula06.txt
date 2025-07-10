@@ -1,0 +1,54 @@
+Aula 6
+Professor: Renato Pimentel
+
+-Algoritmso de busca
+
+    -Busca pelo menor caminho
+
+        -Relembrando:
+            -Dado um grafo G(V,A), um vértice u ∈ V está conectado a outro
+            vértice, v ∈ V se existe um caminho de u para v.
+
+            -Quando u e v são adjacentes (vizinhos), o menor caminho de u para V
+            é a aresta que os conecta.
+
+            -No entanto, é muito comum não existir uma aresta conectando u e v
+            diretamente.
+                -Por exemplo, os vértices 0 e 4 não são adjacentes.
+
+            -Quando u e v não são adjacentes, mas conectados, é possível
+            representar o(s) caminho(s) de u para v em termos das arestas que
+            compêm o(s) mesmo(s);
+                -No dígrado sendo usado, um possível caminho de 1 para 4 é dado por
+                (0,1), (1,2), (2,4).
+                Outra possibilidade: (0,1), (1,3), (3,4).
+
+            -Menor caminho
+                -O menor caminho (ou caminho geodésico) entre dois vértices é o que
+                representa o menor comprimentoª dentre todos os caminhos possíveis
+                entre ambos.
+                    ªNeste caso, definido em termos da quantidade de arestas do caminho.
+
+                -Ambos os caminhos acima têm comprimento 3.
+                -em grafos ponderados, o comprimento do caminho corresponde à
+                soma dos pesos das arestas que o define.
+
+        -Algoritmo de Dijkstra
+            -Uma das maneiras de achar o menor caminho é utilizando o algoritmo
+            de Dijkstra:
+                -Talvez o mais conhecido algoritmo;
+                -Trabalha com grafos e dígrafos, ponderados ou não.
+                -No caso de um grafo ponderado, as arestas não podem ter pesos
+                negativos;
+                
+            -Como funciona o algoritmo de Dijkstra:
+                -Partindo de um vértice inicial, o algoritmo de Dijkstra calcula a menor
+                distância deste vértice a todos os demais a ele conectados.
+
+                $$OLHAR EXEMPLO NO SLIDE
+
+            -Aplicações
+                -Encontrar o grau de separação entre duas pessoas em uma rede social;
+                -Encontrar um trajeto num mapa rodoviário;
+                -Programar robôs para explorar áreas;
+                -Algoritmos de roteamento.
