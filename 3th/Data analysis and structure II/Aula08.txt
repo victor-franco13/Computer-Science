@@ -1,0 +1,94 @@
+Aula 8
+Professor: Renato Pimentel
+
+Árvores
+
+    -Definições básicas
+        -Uma árvore é uma abstração matemática usada para representar estruturas
+        hierarquicas não lineares dos objetos modelados
+
+        -É um tipo especial de grafo:
+            -Definida usando um conjunto de nós (ou vértices) e arestas
+            -Qualquer par de vértices está conectado a apenas uma aresta
+                -Grafo não direcionado, conexo e acíclico
+
+    -Exemplos de aplicações
+        -Genealogia: Relações de descendência (pai, filho, etc.)
+        -Gestão/administração: diagrama hierárquico de uma organização;
+        campeonatos de modalidades desportivas;
+        -Biologia: taxonomia
+        -Computação:
+            -Árvores trie (ou árvores de prefixo): usadas em mecanismos de busca e
+            corretores ortográficos
+            -Representação do espaço de soluções de um problema
+                -Ex.: jogo de xadrez - cada elemento da árvore correspondente a uma
+                determinada posição das peças no tabuleiro;
+            -Modelagem de algoritmos:
+                -Algoritmos e busca em largura (BFS) e profundidade (DFS), árvores de
+                decisão (IA), etc.
+
+    -Conceitos
+        -Vértice, ou nó é cada uma das entidades representadas na árvore.
+        -A representação do vértice depende do problema estudado:
+            -Organização do sistema operacional, onde cada vértice representa
+            justamente uma pasta ou diretório do sistema
+            -Árvore trie: cada vértice pode representar uma letra ou prefixo.
+        -Assim como em grafos, cada aresta representa a ligação (conexão)
+        existente entre dois vértices
+        -Raiz: vértice mais alto na árvore, o único que não possui pai
+        -Pai ou ancestral: vértice antecessor imediato de outro vértice
+        -Filho: o vértice sucessor imediato de outro vértice
+        -Nó folha ou terminal: qualquer vértice que não possui filhos
+        -Nó interno ou não-terminal: vértice que possui ao meno um filho
+        -Caminho: sequência de nós, de modo que sempre existe uma aresta
+        conectando o nó anterior ao seguinte
+            -Existe exatamente um caminho da raiz até qualquer um dos vértices
+
+    -Subárvores e grau
+        -Dado um nó, cada filho é considerado a raiz de uma nova subárvore;
+        -Qualquer nó é raiz de uma subárvore que consiste do próprio e dos nós
+        abaixo dele (conceito recursivo).
+        -O grau de um nó é o número de subárvores (ou filhos) que possui
+            -Nós folhas possuem grau zero
+
+    -Nível e altura
+        -Nível
+            -É dado pelo número de nós no caminho entre o nó em questão e a raiz
+            (nível 0).
+            -Nós são classificados em diferentes níveis.
+
+        -Altura
+            -Ou profundidade, corresponde ao total de níveis de uma árvore;
+            -Comprimento do caminho mais longo da raiz até uma de suas folhas
+
+    -Tipos de árvores
+        -Na computação, assim como na natureza, existem vários tipos
+        diferentes de árvores
+        -Cada uma delas foi desenvolvida pensando-se em distintas
+        possibilidades de aplicações:
+            -árvore binária de busca
+            -árvore AVL
+            -árvore rubro-negra
+            -árvore B, B+ e B*
+            -árvore 2-3
+            -árvore 2-3-4
+            -quadtree
+            -octree
+
+    -Árvore binária de busca
+        -Árvore binária onde, para cada nó, seus descendentes da subárvore da
+        esquerda (direita) possuem valores menores (maiores) que o mesmo
+        -Útil em diversas aplicações, como bancos de dados (eficiência de
+        índices de pesquisa), compiladores (análise de símbolos), IA (tomadas
+        de decisão), dicionários, filtragem de informações (firewall), etc.
+        -Dependendo das operações de inserção/remoção, árvore pode ficar
+        desbalanceada, prejudicando eficiência. Duas variantes sanam o
+        problema:
+            -Árvore AVL
+            -Árvore rubro-negra
+
+    -Árvore B e variantes
+        -A árvore B e suas variantes (B+ e B*) são EDs balanceadas usadas
+        principalmente para armazenar e organizar grandes volumes de dados
+        em sistemas que requerem acesso eficiente, como bancos de dados e 
+        sistemas de arquivos
