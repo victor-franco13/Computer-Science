@@ -92,3 +92,22 @@ Professor: Renato Pimentel
         principalmente para armazenar e organizar grandes volumes de dados
         em sistemas que requerem acesso eficiente, como bancos de dados e 
         sistemas de arquivos
+        -Evoluções das árvores binárias de busca, otimizadas para minimizar
+        acessos a disco e maximizar eficiência em leitura e escrita
+        -Árvore B+: dados armazenados somente nas folhas;
+        -Árvore B*: otimização para muitas inserções/remoções (política de
+        divisão);
+        -Árvore 2-3 e 2-3-4: Árvores B onde cada nó pode ter 1 ou 2 chaves
+        (e 2 ou 3 filhos); ou 1 a 3 chaves e 2 a 4 filhos, respectivamente.
+
+    -Quadtree e octree
+        -Quadtree: ED usada para armazenar e organizar informações espaciais
+        de forma eficiente. Particiona recursivamente um espaço 2D em quatro
+        regiões menores, facilitando operações como busca, inserção e remoção
+        de elementos
+        -Os dados armazenados em cada folha dependem da aplicação. Mais
+        comuns: computação gráfica (armazenamento, compressão e 
+        renderização de imagens), Sistemas de Informações Geográficas (GIS),
+        simulações físicas e jogos (colisões), indexação espacial (buscas), visão
+        computacional.
+        -Octree: equivalente 3D da quadtree
