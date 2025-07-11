@@ -20,3 +20,5 @@ Códigos:
  !(simbolo): negação
 
  $$: atençao/prova
+
+ ##: Relembrando

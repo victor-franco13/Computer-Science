@@ -1,0 +1,116 @@
+Aula 09
+Professor: Renato Pimentel
+
+Árvores - Introdução
+    -Árvores binárias
+        -Árvores onde cada nó pode possuir nenhuma, uma ou no máximo
+        duas subárvores:
+            -Subárvore da esquerda e da direita
+        -Úteis em situações onde a cada passo é preciso tomar uma decisão
+        entre duas direções
+            -ex:
+                -bancos de dados, compiladores, compressão de dados (algoritmo
+                de Huffman), representação de expressões aritméticas, etc.
+
+        -Existem três tipos de árvores binárias:
+            -Estritamente binária
+            -Quase completa
+            -Cheia
+
+        -Árvore estritamente binária
+            -Cada nó possui sempre ou zero (no caso de nó folha) ou duas
+            subárvores;
+            -Nenhum nó tem filho único
+
+        -Árvore binária quase completa
+            -A diferença de altura entre as subárvores de qualquer nó é no máximo 1
+            -Se a altura da ávore é H, então cada nó folha está no nível H-1 
+            (último) ou H-2
+
+        -Árvore binária onde todos os nós folhas estão no mesmo
+        nível
+        
+        -Características:
+            -Há exatamente 2^n nós no nível n
+            -Uma árvore de altura H possui 2^H-1 nós
+
+        -Representação computacional
+            -Duas abordagens principais:
+                -Usando um array - Alocação estática
+                -Usando uma lista encadeada - Alocação dinâmica
+                
+            -Assim como em grafos, a melhor representação, dentre as duas,
+            depende da aplicação. Não existe uma ideal para todos os casos.
+
+            -Independentemente do tipo de alocação usado na implementação da
+            árvore, as sequintes operações básicas são possíveis:
+                -criação da árvore
+                -inserção de um elemento
+                -remoção de um elemento
+                -busca por um elemento
+                -destruição da árvore
+                -informações como número de nós, altura ou se está vazia.
+
+            -Usando um array (heap)
+                -Alocação estática: há um máximo de nós - tamanho do array
+                -A heap permite uma árvore binária completa ou quase completa.
+                -Usa 2 funções para a posição dos filhos à esquerda e à direita:
+                    FILHO_ESQ(PAI) = 2 * PAI + 1
+                    FILHO_DIR(PAI) = 2 * PAI + 2
+
+                -Uso: quando todos os elementos e a estrutura da árvore são
+                conhecidos a priori. Mais adequado para buscas frequentes
+
+            -Usando lista encadeada (alocação dinâmica)
+                -Espaço de memória alocado em tempo de execução
+                -Cresce à medida que novos elementos são armazenados, e diminui à
+                medida que elementos são removidos
+
+                -Uso: não necessita que se conheça previamente todos os elementos a
+                serem inseridos na árvore. A árvore a ser representada não precisa ser
+                uma árvore binária completa ou quase completa
+                    -Mais adequado na maioria das situações
+
+            -Um tipo abstrato de dados (TAD) para árvore binária
+                -Consideramos um tipo abstrato de dados opaco em Linguagem C para
+                representação encadeada
+                    ##Relembrando: Tipo opaco
+                        -A ED será referenciada mediante um ponteiro para a mesma, ao invés de
+                        uma variável do tipo "árvore binária" diretamente
+                        -Isto permite ocultar a implementação, permitindo sua alteração sem interferir
+                        no funcionamento de qualquer código que o utilize - desde que a interface
+                        seja respeitada
+                        
+                -Alocação dinâmica
+                    -Para guardar o primeiro nó da árvore utilizamos um ponteiro para
+                    ponteiro
+                        -armazena-se o endereço de um ponteiro
+                    -Possibilita mudar quem é a raiz da árvore (caso necessário)
+                        -Mudança não fica "visível" para o usuário da ED
+
+                    -Modularização do TAD:
+                        -ArvoreBinaria.h: a interface em si: definição do tipo opaco; funçoes
+                        disponiveis para manipular a arvore binaria (prototipos)
+                        -ArvoreBinaria.c: o que deve ficar oculto do usuario, alem da
+                        implementação das funçoes definidas pela interface. Inclui a definição do
+                        tipo nó
+                    -Tipo nó: estrutura que contém:
+                        -info: Representa a informação, ou seja, os dados correspondentes ao
+                        elemento (nó/vértice) em questão
+                            -Para fins de simplicidade, será no TAD ilustrado um int
+                        -*esq e *dir: ponteiros para os nós filhos à esquerda e à direita do nó
+
+                    -Liberando a árvore binária da memória 1
+
+                        -Uso de duas funções:
+                            -Uma auxiliar (não disponível na interface) percorre e libera os nós; outra - a
+                            que o usuário chama - trata a raiz
+
+                    -Liberando a árvore binária da memória 2
+
+                        -Passo a passo:
+                            -Visita B
+                            -Visita D
+                            -Libera D, volta p/ B
+                            -Libera B, volta p/A
+                            -Visita C 
