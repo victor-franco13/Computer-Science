@@ -121,3 +121,6 @@ Professor: Renato Pimentel
                             -Libera C, volta p/A e
                             -Libera A
                             -Libera raiz
+
+        -Verificando se a árvore binária está vazia II
+            -Primeiro teste verifica se o ponteiro ArvBin *raiz é null - problema na compiladores
