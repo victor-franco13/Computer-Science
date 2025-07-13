@@ -111,6 +111,13 @@ Professor: Renato Pimentel
                         -Passo a passo:
                             -Visita B
                             -Visita D
-                            -Libera D, volta p/ B
+                            -Libera D, volta p/B
                             -Libera B, volta p/A
-                            -Visita C 
+                            -Visita C
+                            -Visita E
+                            -Libera E, volta p/C
+                            -Visita F
+                            -Libera F, volta p/C
+                            -Libera C, volta p/A e
+                            -Libera A
+                            -Libera raiz
