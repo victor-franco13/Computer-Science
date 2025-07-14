@@ -1,0 +1,141 @@
+Aula 6
+Professor: Daniel Furtado
+
+-Fundamentos da CSS
+
+    -Cascade, Especificidade e Herança
+        -Ordem das Regras:
+            - Cascade
+                -Caso haja declarações CSS repetidas e elas estejam em
+                regras do mesmo tipo de seletor, prevalecerá a declaração
+                definida por último
+
+            -Especificidade
+                -Maior especificidade implica em possível sobreposição de
+                outras declarações
+                    -código inline > seletor de ID > seletor classe > seletor de elemento
+
+            -Herança
+                -Algumas propriedades herdam os valores do elemento pai
+                    ex: font-family, color e text-align
+                        um <p> dentro de um <div> herda a fonte definida para o <div>
+
+                -Outras propriedades não herdam
+                    ex: width, margin e padding
+
+                -Definir uma propriedade para o valor inherit ativa a herança
+
+    -Ícones
+        -Em páginas web é comum que botões e outros elementos contenham ícones
+
+        -Tais ícones podem ser inseridos de várias formas, como:
+            -Ícones SVG
+            -Ícones de fonte
+
+-Design Responsivo e Bootstrap
+    -Design Responsivo
+        -Baseado na ideia de que o website deve ter a capacidade de se ajustar para
+        permitir uma boa exibição em todos os dispositivos, seja um desktop, um
+        notebook, um tablet ou um smartphone
+
+        -Evita a necessidade de ter diferentes versões do website para diferentes
+        dispositivos e tamanhos de tela
+
+        -Pode envolver a utilização de vários recursos como a meta tag viewport,
+        media queries, unidades relativas, flexbox, grid etc.
+
+    -Conceito de Viewport
+        -Viewport é a área visível de renderização da página no navegador
+        -Na viewport, o dimensionamento (largura e altura) é tratado utilizando o
+        conceito de pixel CSS
+        -1 pixel CSS de largura na viewport nem sempre corresponde a 1 pixel físico
+        da tela do dispositivo, pois pode ser levado em conta um fator de escala
+        conhecido como pixel ratio
+        -A ideia do pixel ratio é permitir que dispositivos com alta densidade de
+        pixels, como smartphones, tenham os elementos da página ampliados
+        -Para ativar o fator de escala é necessário utilizar a tag de responsividade:
+            ex: <meta name="viewport" content="width=device-width, initial-scale=1">
+                -Viabiliza a responsividade de acordo com o dispositivo e sua tela
+                -Faz com que o pixel ratio do dispositivo móvel seja considerado quando a
+                página for acessada pelo dispositivo
+                -Portanto, o dimensionamento dos elementos passa a considerar a
+                densidade de pixels da tela do dispositivo móvel
+                -Resultado: página melhor escalonada em dispositivos com alta resolução e
+                tela pequena
+                -Utilizar a meta tag viewport não faz com que a página se torne totalmente
+                responsiva
+                -A meta tag viewport é apenas o primerio passo para o design responsivo
+                -Normalmente ela é utilizada em conjunto com outros recursos como:
+                    -Media queries
+                    -Unidades relativas (como %)
+                    -Módulo Flexbox da CSS, Grid etc.
+            
+    -Introdução à Media Queries
+        -Permite ao desenvolvedor testar condições sobre o navegador e o
+        dispositivo do usuário para aplicar ou não as regras CSS
+        -Por exemplo, é possível aplicar estilos CSS apenas quando a tela do
+        dispositivo tem uma largura mínima ou máxima; ou esteja em determinada
+        posição, como na vertical ou na horizontal
+
+    -Introdução ao Framework Bootstrap
+        -Bootstrap é um framework de front-end muito popular
+        -É gratuito, de código aberto, com foco na criação de páginas responsivas
+        -Utiliza HTML, CSS e JavaScript
+        -Disponibiliza uma coleção de classes CSS
+            -Melhoria de layouts, botões, formulários, etc.
+        -Disponibiliza uma coleção de ícones e templates
+
+        -Tabelas
+        Classe Bootstrap                    Significado
+        table                               Classe principal. Tabela com divisões horizontais
+        table-striped                       Adiciona cores alternadas às linhas
+        table-bordered                      Adiciona bordas em todas as células
+        table-hover                         Adiciona cor à linha quando apontada pelo mouse
+        <table class = "table table-striped table-hover">
+
+        -Alertas
+        
+        -Formulários
+
+        -Campos com rótulos flutuantes
+            -Bootstrap 5 suporta campos com rótulos flutuantes
+            -O container do campo/rótulo deve usar a classe form-floating
+            -O label deve ser inserido depois do input
+            -É obrigatório o atributo placeholder com um valor qualquer diferente de vazio
+            -O conteúdo do label é utilizado como rótulo flutuante (e não o placeholder)
+
+        -Sistema de Grade do Bootstrap
+            -Permite exibir conteúdo em linhas e colunas, mas com foco em responsividade
+            -Baseado no módulo flexbox da CSS e em media queries
+            -Linhas são containers para colunas
+            -Colunas são flexíveis
+                -Até 12 "espaços" em cada linha
+                -Podem ser combinadas
+
+            -Ideia central
+                -Telas largas -> colunas na horizontal
+                -Telas estreitas -> colunas empilhadas na vertical
+
+        -Sistema de Grade
+            -Classe CSS row
+                -Permite adicionar uma nova linhas na grade
+            -Classe CSS col (ou variação)
+                -Permite adicionar uma nova coluna na linha
+            -Classes adicionadas a containers, como o <div>
+
+        -Breakpoints (grid tiers)
+            -Permitem criar grades responsivas (conceito mobile first)
+            -Definem quando o layout será ajustado nos dispositivos
+            -As colunas aparecem empilhadas na vertical em viewports com largura
+            inferior ao breakpoint (ponto de quebra)
+            -As colunas aparecem na horizontal em viewports com largura igual ou
+            superior ao breakpoint
+
+        -Variações possíveis para a classe col
+            -Com as variações é possível criar grades flexíveis (responsivas)
+            -Grades flexíveis podem se apresentar na horizontal ou na vertical
+                ex:
+                    -col-2
+                    -col-sm-6
+                    -col-lg-4
+        
