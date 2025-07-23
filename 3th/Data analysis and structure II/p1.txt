@@ -118,3 +118,8 @@ Busca em grafos: Consiste em explorar um grafo
 
     Busca em largura: partindo de um vértice inicial, ela explora todos os vértices vizinhos. Em seguida, para cada vértice vizinho, ela repete esse
     processo, visitando os vértices ainda inexplorados
+
+    Busca pelo menor caminho: partindo de um vértice inicial, calcula a menor distancia desse vertice a todos os demais (desde que exista um caminho entre eles)
+        Algoritmo de Dijkstra
+
+Busca em profundidade
