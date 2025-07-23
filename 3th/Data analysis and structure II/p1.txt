@@ -28,3 +28,21 @@ Lista de adjacencias
 
 Matriz
 custo O(n^2)
+
+---------------------- Video aula Backes ----------------------
+
+Grafo: é um modelo matemático que representa relações entre objetos
+
+    -É definido como um conjunto de vértices e um conjunto e arestas que conectam qualquer par de vértices.
+    -G = (V, A)
+
+Vértice: é cada uma das entidades representadas em um grafo.
+
+        -Grau de um vértice: é o numero de arestas que chegam ou partem dele
+            -Em digrafo temos grau de entrada e de saída.
+
+Arestas: Também chamda de "arco"
+        -Está associada a dois vértices (V1,V2)
+
+        Direção das arestas:
+            Direcionado(dígrafo) ou não direcionado
