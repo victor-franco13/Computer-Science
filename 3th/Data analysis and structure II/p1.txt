@@ -64,13 +64,46 @@ Caminho: é uma sequência de vértices de modo que existe sempre uma aresta lig
     Arestas multiplas: é um grafo que permite mais de uma aresta conectando o mesmo par de vértices
                        Também é conhecido como Multigrafo
 
-Grafo trivial: é um grafo com um único vértice e sem arestas
+Tipos de grafos:
 
-Grafo simples: é um grafo não direcionado, sem laços e sem arestas paralelas.
+    Grafo trivial: é um grafo com um único vértice e sem arestas
 
-Grafo completo: é um grafo simples onde cada vértice se conecta a todos os outros vértices
+    Grafo simples: é um grafo não direcionado, sem laços e sem arestas paralelas.
 
-Grafo regular: é um grafo onde todos os vértices possuem o mesmo grau
+    Grafo completo: é um grafo simples onde cada vértice se conecta a todos os outros vértices
 
-Subgrafo: é uma parte do grafo
+    Grafo regular: é um grafo onde todos os vértices possuem o mesmo grau
 
+    Subgrafo: é sub conjunto grafo (uma parte do grafo)
+
+    Grafo bipartido: é um grafo cujos vértices podem ser divididos em dois conjuntos
+
+    Grafo conexo: Existe um caminho partindo de qualquer vértice até qualquer outro vértice do grafo
+
+    Grafo desconexo: Não existe um caminho ligando dois vértices selecionados
+
+    Grafo isomorfos: Dois grafos são ditos isomorfos se existe uma função que faça o mapeamento
+    de vértices e arestas de modo que os dois grafos se tornem coincidentes (dois grafos iguais, as vezes com vértices diferentes)
+
+    Grafo ponderado: é o grafo que possui "pesos" associados a cada uma de suas arestas
+
+    Grafo Hamiltoniano: é o grafo que possui um caminho que visita cada VÉRTICE apenas uma vez
+
+    Grafo Euleriano: é o grafo que possui um "ciclo" que visita cada ARESTA apenas uma vez
+
+Representação de grafos:
+    Duas abordagens são muito utilizadas:
+        Matriz de adjacencias
+        Lista de adjacencias
+
+    Matriz de adjacencia:
+        Uma matriz N x N é utilizada para armazenar o grafo, onde N é o número de vértices
+        Uma aresta é representada por uma "marca" na posição (i,j) da matriz
+            
+        Grafo e digrafo tem diferença
+
+    Lista de adjacencia
+        Cada vértice aponta para todos os vértices que ele tem conexão
+
+"Grafo.h": definir protótipos das funções e ponteiro "Grafo"
+"Grafo.c": definir o tipo de "grafo" e implementas as suas funções
