@@ -64,3 +64,13 @@ Caminho: é uma sequência de vértices de modo que existe sempre uma aresta lig
     Arestas multiplas: é um grafo que permite mais de uma aresta conectando o mesmo par de vértices
                        Também é conhecido como Multigrafo
 
+Grafo trivial: é um grafo com um único vértice e sem arestas
+
+Grafo simples: é um grafo não direcionado, sem laços e sem arestas paralelas.
+
+Grafo completo: é um grafo simples onde cada vértice se conecta a todos os outros vértices
+
+Grafo regular: é um grafo onde todos os vértices possuem o mesmo grau
+
+Subgrafo: é uma parte do grafo
+
