@@ -1,0 +1,30 @@
+Grafo: Um grafo ou rede é um modelo matemático que representa relações entre
+objetos – nós ou vértices – de um determinado conjunto.
+
+Vértices: é cada item do conjunto em estudo representado no grafo.
+
+Aresta: representa a ligação existente entre dois vértices.
+
+Adjacentes: se existe uma aresta interligando vértices
+
+Aresta dirigida: se a relação entre dois elementos ocorre somente numa direção
+
+Grafo dirigido (dígrafo): se todas as suas arestas forem dirigidas.
+
+Grau: o número de vizinhos que um vértice possui
+
+Caminho: sequência de vértices do grafo, onde cada vértice está conectado ao seguinte por
+meio de uma aresta
+
+Ciclo: caminho fechado, em que o vértice inicial e o final são o mesmo.
+
+Grafo conexo: para quaisquer dois vértices é possivel encontrar um caminho
+
+Grafo fortemente conexo: há o caminho de ida e volta para qualquer par de vértice
+
+Pode ser representado com:
+Matriz de adjacencias
+Lista de adjacencias
+
+Matriz
+custo O(n^2)

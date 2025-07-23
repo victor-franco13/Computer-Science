@@ -1,0 +1,53 @@
+Aula 07
+Professor: Daniel Furtado
+
+JavaScript
+    -O código JavaScript pode ser inserido de forma embutida dentro do próprio arquivo
+    HTML utilizando o elemento <script> da HTML.
+
+    -Uma forma melhor de inserir o código JavaScript é utilizar um arquivo externo e referenciá-lo na tag <script>
+    com o atributo src.
+
+    Observações Gerais:
+        -Case sensitive
+        -Não precisa de ";"
+        -Tipos de variáveis são definidos automaticamente
+        -Comentário: // ou /*  */
+
+        -Declaração de variáveis:
+            -var nomeDaVariável = valorInicial
+                -Variável com escopo local se declarada dentro de uma função
+                -Variável com escopo global se declarada fora de funções
+
+            -let nomeDaVariável = valorInicial
+                -Variável tem escopo restrito ao bloco de código onde é declarada
+                -Pode ser acessada e atualizada apenas dentro do bloco
+
+            -const nomeDaConstante = valor
+                -Semelhante a let, porém a variável não pode ser atualizada
+                -Deve ser inicializada no momento da declaração
+
+        -Operadores Aritméticos, Relacionais e Lógicos
+            -Adição e Concatenação
+                -Permite somar ou concatenar
+                    -Se um dos operadores é uma string então será feita a concatenação
+
+                -Strings
+                    -Aspas simples ou duplas
+                    -Objetos com propriedades e métodos
+                    -São imutáveis
+
+                -Arrays
+                    -Os elementos são colocados entre colchetes, separados por vírgula
+                    -Pode ser iniciado com vazio
+
+Document Object Model - DOM
+    -Busca na árvore DOM
+        document.querySelector("seletor CSS")
+
+    -Tratamento de Eventos
+        -JS é baseada em eventos
+        -É possivel executar funções na ocorrência de eventos como "clique em um botão"
+
+Exemplo de evento 'mouseenter'
+slide 36

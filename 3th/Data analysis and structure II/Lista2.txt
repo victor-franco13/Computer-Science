@@ -1,0 +1,229 @@
+Lista 2 - Gabarito
+DEEPSEEK
+
+1. Definição de Árvore
+Árvore é uma estrutura de dados não-linear e hierárquica composta por nós, onde:
+- Tem um nó raiz
+- Cada nó tem zero ou mais filhos
+- Não possui ciclos
+- Todos os nós são conectados
+
+2. Contar Nós em Árvore Binária
+Função recursiva que soma 1 (nó atual) + nós da esquerda + nós da direita.
+
+3. Contar Nós Não-Folha
+Contar nós que têm pelo menos um filho (esquerdo ou direito).
+
+4. Contar Folhas
+Contar nós sem filhos (ambos filhos são NULL).
+
+5. Calcular Altura
+Altura é o maior caminho da raiz até uma folha. Calcula-se como 1 + máximo(altura_esquerda, altura_direita).
+
+6. Buscar Número Ímpar
+Percorrer a árvore (pré, em ou pós-ordem) verificando se o valor de cada nó é ímpar.
+
+7. Maior Número em Árvore Não Ordenada
+Percorrer toda a árvore mantendo registro do maior valor encontrado.
+
+8. Excluir Nós com ID Par
+Pós-ordem: processar filhos antes, depois verificar se nó atual tem ID par e liberar memória.
+
+9. Excluir Nós com ID Par em ABB
+Similar à 8, mas mantendo propriedade de ABB após remoções.
+
+10. Verificar se é ABB
+Checar se para cada nó:
+- Todos na esquerda são menores
+- Todos na direita são maiores
+- Subárvores também são ABBs
+
+11. Valor Máximo em ABB
+Na ABB, o maior valor está no nó mais à direita.
+
+12. Espelhar Árvore
+Trocar recursivamente subárvores esquerda e direita de cada nó.
+
+13. ABBs Similares
+Verificar se têm mesma estrutura, independente dos valores.
+
+14. ABBs Iguais
+Verificar se têm mesma estrutura E mesmos valores nos nós.
+
+15. ABB Estritamente Binária
+Todos os nós devem ter 0 ou 2 filhos (nunca 1).
+
+16. Testar se é ABB
+Implementação não-recursiva da função da questão 10.
+
+17. ABB Não-Recursiva
+Usar pilha para inserção, remoção e busca.
+
+18. Construir ABB com M,F,S,D,J...
+Desenho da árvore seguindo regras de ABB com inserções na ordem dada.
+
+19. Construir ABB com A,B,C,...Z
+Árvore degenerada (lista encadeada) se inseridos em ordem crescente.
+
+20. Percursos na Árvore
+- Pré-ordem: raiz, esquerda, direita
+- Em-ordem: esquerda, raiz, direita
+- Pós-ordem: esquerda, direita, raiz
+
+21. ABB vs AVL
+AVL é balanceada (altura das subárvores difere no máximo em 1).
+
+22. Busca em ABB vs AVL
+Igual, mas AVL é mais eficiente por ser balanceada.
+
+23. Altura de Árvore Completa
+h = log2(n+1)-1, onde n é número de nós.
+
+24. Percursos Não-Recursivos
+Implementar usando pilha:
+- Pré-ordem: empilha raiz, depois direita, depois esquerda
+- Em-ordem: empilha todos esquerdos, depois desempilha processando direitos
+- Pós-ordem: usar duas pilhas ou marcação de nós visitados
+
+25. Menor Valor Não-Recursivo
+Percorrer sempre para a esquerda até encontrar NULL.
+
+26. Menor Valor em ABB Não-Recursivo
+Igual 25, mas mais eficiente por propriedades da ABB.
+
+27. K-ésimo Menor em ABB
+Em-ordem não-recursivo, contando até o k-ésimo elemento.
+
+28. Floor em ABB
+Buscar valor, mantendo registro do último nó com valor ≤ x.
+
+29. Busca Não-Recursiva
+Usar pilha ou percurso iterativo.
+
+30. Busca Valor Negativo
+Percorrer árvore verificando se valor < 0.
+
+31. Verificar ABB Não-Recursivo
+Usar pilha para percurso em-ordem, verificando ordem crescente.
+
+32. Operações em ABB
+a) Inserções e desenho da árvore resultante
+b) Percursos solicitados
+c) Remoções e árvore final
+
+33. Altura Não-Recursiva
+Usar busca em largura com fila, contando níveis.
+
+34. ABB Aproximadamente Completa
+Extrair elementos em-ordem, reconstruir selecionando medianas.
+
+35. Folhas em ABB
+Contar nós sem filhos (esquerdo e direito NULL).
+
+36. Nós com Um Filho
+Contar nós com apenas um filho (esquerdo XOR direito NULL).
+
+37. Nós com Números Primos
+Verificar primalidade de cada valor armazenado.
+
+38. Comparar ABBs
+Verificar se têm mesma estrutura e mesmos valores.
+
+39. Caminhos até Folhas
+Armazenar caminho durante percurso, imprimir ao encontrar folha.
+
+40. Percurso em Nível
+Usar fila (BFS) para visitar nós nível a nível.
+
+41. Nós Rubros em Árvore Rubro-Negra
+Identificar nós vermelhos na sequência dada.
+
+42. Árvore AVL
+Árvore binária de busca balanceada onde para cada nó, as alturas das subárvores diferem no máximo em 1.
+
+43. Vantagens/Desvantagens
+Vantagens: operações O(log n), desempenho garantido
+Desvantagens: maior complexidade de implementação, overhead de rotações
+
+44. Construir AVL
+Inserir elementos na ordem dada, aplicando rotações quando necessário para balancear.
+
+45. ABB vs AVL
+AVL mantém balanceamento automático através de rotações.
+
+46. Verificar Estritamente Binária
+Todos nós devem ter 0 ou 2 filhos.
+
+47. Copiar Árvore
+Percurso pré-ordem, criando novos nós com mesmos valores.
+
+48. Construir AVL
+Inserir elementos na ordem dada, mostrando rotações aplicadas.
+
+49. Chaves Duplicadas
+Modificar inserção para substituir valor se chave já existir.
+
+50. Árvores com Alturas 2-6
+Mostrar diferentes configurações com os mesmos valores.
+
+51. Análise de Árvore
+Responder itens a-f conforme árvore específica.
+
+52. Construir ABB
+Inserir valores na ordem dada e desenhar árvore resultante.
+
+53. Número de ABBs
+Com 4 nós existem 14 árvores binárias de busca possíveis.
+
+54. Busca Inválida
+Identificar sequência que viola propriedades de ABB.
+
+55. Rotação DD
+Exemplo de inserção que causa desbalanceamento direita-direita e rotação simples.
+
+56. Rotação DE
+Exemplo de inserção que causa desbalanceamento direita-esquerda e rotação dupla.
+
+57. Remoção em AVL
+Exemplo de remoção que causa desbalanceamento e rotação.
+
+58. Menor em AVL
+Igual ABB - nó mais à esquerda.
+
+59. Imprimir Nível
+Usar BFS, imprimindo apenas nós do nível solicitado.
+
+60. Divisores da Soma
+Percorrer árvore, verificar condição para nós com dois filhos.
+
+61. Ancestral Comum
+Encontrar primeiro nó onde os dois valores procurados estão em subárvores diferentes.
+
+62. Somar Filhos
+Pós-ordem: somar filhos e armazenar no pai.
+
+63. Operações em AVL
+Remover 8 e inserir 9, mostrando rotações necessárias.
+
+64. Lista em Ordem
+Percorrer em-ordem, adicionando elementos à lista.
+
+65. Soma Níveis Ímpares
+BFS, somando valores apenas em níveis ímpares (1, 3, ...).
+
+66. Tamanho Não-Recursivo
+Usar pilha ou fila para contar nós.
+
+67. Percursos Não-Recursivos
+Implementações com pilha (ver questão 24).
+
+68. Árvore de Municípios
+Implementar ABB com:
+- Inserção por nome
+- Funções de consulta:
+  a) Contagem de nós
+  b) Filtro por população
+  c) Cálculo de densidade
+  d) Cálculo de porcentagem da área
+  e) Listagem ordenada
+  f) Cidade mais populosa

@@ -1,0 +1,193 @@
+Gabarito Completo da Lista 1 - Teoria dos Grafos
+
+1. Subgrafo
+Um subgrafo G' = (V', E') de G = (V, E) é um grafo onde V' está contido em V e E' está contido em E, mantendo apenas as conexões entre os vértices de V'.
+
+2. Grafo Bipartido
+Grafo cujos vértices podem ser divididos em dois conjuntos V1 e V2 onde todas as arestas conectam um vértice de V1 a um de V2. Exemplo: V1 = {1,2}, V2 = {A,B} com arestas 1-A e 2-B.
+
+3. Grafo Conexo e Desconexo
+Conexo: Existe caminho entre qualquer par de vértices (ex: 1-2-3).
+Desconexo: Existem vértices sem caminho entre si (ex: 1-2 e 3-4 separados).
+
+4. Grafos Isomorfos
+Grafos com mesma estrutura mas vértices com rótulos diferentes. Exemplo: Grafo 1-2-3 é isomorfo a A-B-C.
+
+5. Grafo Hamiltoniano
+Contém um ciclo que passa por todos os vértices exatamente uma vez. Exemplo: Triângulo 1-2-3-1.
+
+6. Grafo Euleriano
+Contém ciclo que passa por todas as arestas exatamente uma vez. Condição: todos vértices com grau par. Exemplo: Quadrado 1-2-3-4-1.
+
+7. Versões do Grafo G(V,E)
+V = {1,2,3,4,5,6}
+E = {(2,5),(6,1),(5,3),(2,3)}
+
+Não orientado:
+1-6
+2-3
+ \ /
+  5
+4 (isolado)
+
+Orientado:
+1←-6
+2→3
+ ↘↙
+ 5
+4 (isolado)
+
+
+9. Grafos Completos K4, K5, K6
+K4: 4 vértices totalmente conectados (6 arestas)
+K5: 5 vértices totalmente conectados (10 arestas)
+K6: 6 vértices totalmente conectados (15 arestas)
+
+10. Grafo com Grau 2
+Exemplo: Grafo ciclo C4 (quadrado) onde cada vértice tem grau 2.
+
+11. Arestas com Graus 3,3,3,5
+Soma graus = 3+3+3+5 = 14
+Número de arestas = 14/2 = 7
+
+12. Soma dos Graus
+Não orientado: soma = 2m (m = número de arestas)
+Orientado: soma graus saída = m
+
+13. Máximo Vértices com 35 Arestas
+3n ≤ 70 ⇒ n ≤ 23.33 ⇒ máximo 23 vértices
+
+14. Arestas em Grafos Completos
+Não orientado: n(n-1)/2
+Orientado: n(n-1)
+
+15. Vizinhos em Matriz de Adjacência
+Função em C que percorre a linha da matriz para achar vizinhos.
+
+16. Vizinhos em Lista de Adjacência
+Função em C que percorre a lista encadeada do vértice.
+
+17. Componentes Conexas
+Número de subgrafos conexos desconexos entre si.
+
+18. Busca em Profundidade (DFS)
+Algoritmo que explora recursivamente cada ramo até o fim.
+Aplicações: labirintos, detecção de ciclos.
+
+19. Busca em Largura (BFS)
+Algoritmo que explora por níveis.
+Aplicações: menor caminho, redes sociais.
+
+20. Menor Caminho
+Algoritmos como Dijkstra para caminhos mínimos.
+Aplicações: GPS, roteamento.
+
+21. Análise de Digrafo
+a) Caminho M-S: M→S
+b) Ciclo: O→M→S→O
+c) Conexo ou não
+d) Grau de N e R
+e) Lista de adjacência
+f) Matriz de adjacência
+
+22. Verificação Acíclica com DFS
+Modificar DFS para detectar back edges (arestas de retorno).
+
+23. DFS Não Recursivo
+Implementar usando pilha explícita.
+
+24. Aplicações de Grafos
+Redes sociais, mapas, circuitos, etc.
+
+25. Digrafo de Comunicação
+Vértices: pessoas
+Arestas: direcionadas pela língua falada
+
+26. Escolha de Representação
+a) Lista para grafos esparsos
+b) Matriz para densos
+c) Matriz para acesso rápido
+
+27. Resultado BFS/DFS
+Mostrar ordem de visitação dos vértices.
+
+28. Grafo com Vértices 1-8
+a) Desenhar conforme tabela
+b) Construir matriz
+c) Construir lista
+
+29. Verificar Orientação
+Checar simetria da matriz (simétrica = não orientado).
+
+30. Verificação O(1) em Matriz
+Acesso direto por índices i,j.
+
+31. Comparação de Espaço
+Matriz ocupa O(V²), lista O(V+E).
+
+32. Verificar Não Isomorfismo
+Comparar número de vértices, arestas e sequência de graus.
+
+33. Verificar Ciclo
+Checar se caminho começa e termina no mesmo vértice.
+
+34. Ciclo Simples
+Ciclo sem repetição de vértices (exceto início/fim).
+
+35. BFS/DFS em Grafo Dado
+Mostrar ordem de visita e distâncias.
+
+36. Componentes Conexos
+Aplicar DFS para identificar subgrafos desconexos.
+
+37. BFS/DFS a partir de 0
+Mostrar ordem de visitação.
+
+38. TAD Grafo com Matriz
+Implementar estrutura com matriz VxV.
+
+39. TAD Grafo com Lista
+Implementar estrutura com listas encadeadas.
+
+40. Definição de Árvore
+Grafo conexo acíclico com n vértices e n-1 arestas.
+
+41. Labirinto com Grafos
+Modelar como grafo e usar DFS/BFS para achar saída.
+
+42. Grafo Fortemente Conexo
+Todo par de vértices tem caminho bidirecional.
+
+43. Ler Grafo de Arquivo
+Definir formato e implementar leitura para lista.
+
+44. Componentes Conexos
+Implementar contagem com DFS (O(V+E)).
+
+45. Caminhos Mais Curtos
+Aplicar Dijkstra a partir de A e B.
+
+46. Componentes Fortemente Conexos
+Modificar DFS para identificar (algoritmo de Kosaraju).
+
+47. Árvore Geradora Mínima
+Kruskal: ordenar arestas
+Prim: crescer a partir de vértice
+
+48. Arestas em Árvore
+n-1 arestas para n vértices.
+
+49. Pontes Mínimas
+Aplicar Kruskal para conectar ilhas com menor custo.
+
+50. Prim a partir de A
+Mostrar passo a passo.
+
+51. Conexidade para Prim
+Sim, grafo deve ser conexo.
+
+52. Prim Otimizado
+Aproveitar ordenação para seleção mais rápida.
+
+53. Caminho na Árvore Mínima
+Nem sempre é o menor caminho no grafo original.
