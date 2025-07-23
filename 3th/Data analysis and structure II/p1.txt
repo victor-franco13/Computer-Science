@@ -107,3 +107,14 @@ Representação de grafos:
 
 "Grafo.h": definir protótipos das funções e ponteiro "Grafo"
 "Grafo.c": definir o tipo de "grafo" e implementas as suas funções
+
+Busca em grafos: Consiste em explorar um grafo
+    Principais tipos de busca em grafos:
+    Produndidade
+    Largura
+    Pelo menor caminho
+
+    Busca em profundidade: partindo de um vértice inicial, ela explora o máximo possível cada um de seus ramos antes de retroceder ("backtracking")
+
+    Busca em largura: partindo de um vértice inicial, ela explora todos os vértices vizinhos. Em seguida, para cada vértice vizinho, ela repete esse
+    processo, visitando os vértices ainda inexplorados
