@@ -123,3 +123,7 @@ Busca em grafos: Consiste em explorar um grafo
         Algoritmo de Dijkstra
 
 Busca em profundidade
+    Visita os vértices seguintes ao visitado que ainda não forão visitados.
+
+Busca em largura
+    

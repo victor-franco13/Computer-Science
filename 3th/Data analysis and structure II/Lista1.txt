@@ -1,4 +1,5 @@
 Gabarito Completo da Lista 1 - Teoria dos Grafos
+DEEPSEEK
 
 1. Subgrafo
 Um subgrafo G' = (V', E') de G = (V, E) é um grafo onde V' está contido em V e E' está contido em E, mantendo apenas as conexões entre os vértices de V'.
