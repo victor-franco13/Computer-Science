@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .error-message {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .error-input {
+            border-color: #d32f2f !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        <form id="formCadastro">
+            <div class="form-group">
+                <label for="nome">Nome completo*</label>
+                <input type="text" id="nome" name="nome">
+                <span class="error-message" id="nome-error">Campo obrigatório</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="email-error">Campo obrigatório</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="senha">Senha*</label>
+                <input type="password" id="senha" name="senha">
+                <span class="error-message" id="senha-error">Campo obrigatório</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmar-senha">Confirmar Senha*</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha">
+                <span class="error-message" id="confirmar-senha-error">Campo obrigatório</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            
+            <div class="form-group">
+                <label for="genero">Gênero</label>
+                <select id="genero" name="genero">
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                    <option value="nao-informar">Prefiro não informar</option>
+                </select>
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        // Aguarda o carregamento completo do DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtém o formulário pelo ID
+            const formCadastro = document.getElementById('formCadastro');
+            
+            // Adiciona um event listener para o evento de submit do formulário
+            formCadastro.addEventListener('submit', function(event) {
+                // Previne o comportamento padrão de submit do formulário
+                event.preventDefault();
+                
+                // Reseta todas as mensagens de erro e estilos
+                resetErrorMessages();
+                
+                // Flag para verificar se o formulário é válido
+                let isValid = true;
+                
+                // Validação do campo Nome
+                const nome = document.getElementById('nome');
+                if (!nome.value.trim()) {
+                    showError(nome, 'nome-error');
+                    isValid = false;
+                }
+                
+                // Validação do campo Email
+                const email = document.getElementById('email');
+                if (!email.value.trim()) {
+                    showError(email, 'email-error');
+                    isValid = false;
+                } else if (!validateEmail(email.value)) {
+                    document.getElementById('email-error').textContent = 'Email inválido';
+                    showError(email, 'email-error');
+                    isValid = false;
+                }
+                
+                // Validação do campo Senha
+                const senha = document.getElementById('senha');
+                if (!senha.value.trim()) {
+                    showError(senha, 'senha-error');
+                    isValid = false;
+                } else if (senha.value.length < 6) {
+                    document.getElementById('senha-error').textContent = 'A senha deve ter pelo menos 6 caracteres';
+                    showError(senha, 'senha-error');
+                    isValid = false;
+                }
+                
+                // Validação do campo Confirmar Senha
+                const confirmarSenha = document.getElementById('confirmar-senha');
+                if (!confirmarSenha.value.trim()) {
+                    showError(confirmarSenha, 'confirmar-senha-error');
+                    isValid = false;
+                } else if (confirmarSenha.value !== senha.value) {
+                    document.getElementById('confirmar-senha-error').textContent = 'As senhas não coincidem';
+                    showError(confirmarSenha, 'confirmar-senha-error');
+                    isValid = false;
+                }
+                
+                // Se o formulário for válido, pode ser submetido
+                if (isValid) {
+                    alert('Formulário enviado com sucesso!');
+                    // Aqui você poderia enviar o formulário para o servidor
+                    // formCadastro.submit();
+                }
+            });
+            
+            // Função para mostrar mensagem de erro
+            function showError(inputElement, errorElementId) {
+                const errorElement = document.getElementById(errorElementId);
+                inputElement.classList.add('error-input');
+                errorElement.style.display = 'block';
+            }
+            
+            // Função para resetar todas as mensagens de erro
+            function resetErrorMessages() {
+                const errorMessages = document.querySelectorAll('.error-message');
+                errorMessages.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+                
+                const errorInputs = document.querySelectorAll('.error-input');
+                errorInputs.forEach(function(element) {
+                    element.classList.remove('error-input');
+                });
+            }
+            
+            // Função para validar formato de email
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        });
+    </script>
+</body>
+</html>

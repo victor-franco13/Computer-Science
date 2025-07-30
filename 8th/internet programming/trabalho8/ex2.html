@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Estados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #resultado {
+            padding: 10px;
+            background-color: #e9f7ef;
+            border: 1px solid #2ecc71;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selecione seu estado</h1>
+        
+        <select id="estados" onchange="atualizarEstado()">
+            <option value="">Selecione um estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+        
+        <p id="resultado">Nenhum estado selecionado</p>
+    </div>
+
+    <script>
+        // Função que é chamada quando o valor do select é alterado
+        function atualizarEstado() {
+            // Obtém o elemento select
+            const selectEstados = document.getElementById('estados');
+            
+            // Obtém o valor selecionado (sigla do estado)
+            const estadoSelecionado = selectEstados.value;
+            
+            // Obtém o texto da opção selecionada (nome completo do estado)
+            const textoEstado = selectEstados.options[selectEstados.selectedIndex].text;
+            
+            // Obtém o elemento onde será exibido o resultado
+            const resultado = document.getElementById('resultado');
+            
+            // Verifica se um estado foi selecionado (não é a opção vazia)
+            if (estadoSelecionado) {
+                // Atualiza o texto do resultado com a seleção do usuário
+                resultado.textContent = `Estado selecionado: ${textoEstado} (${estadoSelecionado})`;
+                resultado.style.backgroundColor = '#e9f7ef';
+                resultado.style.borderColor = '#2ecc71';
+            } else {
+                // Se nenhum estado foi selecionado (ou seleção foi desfeita)
+                resultado.textContent = 'Nenhum estado selecionado';
+                resultado.style.backgroundColor = '#f9f9f9';
+                resultado.style.borderColor = '#ddd';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Interesses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #listaInteresses {
+            margin-top: 20px;
+        }
+        #listaInteresses li {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .remover {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .remover:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meus Interesses</h1>
+        
+        <div>
+            <input type="text" id="interesse" placeholder="Digite seu interesse">
+            <button id="adicionar">Adicionar</button>
+        </div>
+        
+        <ol id="listaInteresses">
+            <!-- Itens serão adicionados dinamicamente aqui -->
+        </ol>
+    </div>
+
+    <script>
+        // Aguarda o carregamento completo do DOM antes de executar o JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtém referências aos elementos do DOM que serão utilizados
+            const inputInteresse = document.getElementById('interesse');
+            const botaoAdicionar = document.getElementById('adicionar');
+            const listaInteresses = document.getElementById('listaInteresses');
+            
+            // Função para adicionar um novo interesse à lista
+            function adicionarInteresse() {
+                // Obtém o valor digitado no campo de input e remove espaços em branco extras
+                const textoInteresse = inputInteresse.value.trim();
+                
+                // Verifica se o campo não está vazio
+                if (textoInteresse !== '') {
+                    // Cria um novo elemento de lista (li)
+                    const novoItem = document.createElement('li');
+                    
+                    // Cria um span para o texto do interesse
+                    const spanTexto = document.createElement('span');
+                    spanTexto.textContent = textoInteresse;
+                    
+                    // Cria um botão para remover o item
+                    const botaoRemover = document.createElement('button');
+                    botaoRemover.textContent = 'Remover';
+                    botaoRemover.className = 'remover';
+                    
+                    // Adiciona um event listener para o botão remover
+                    botaoRemover.addEventListener('click', function() {
+                        // Remove o item da lista quando o botão é clicado
+                        novoItem.remove();
+                    });
+                    
+                    // Adiciona o texto e o botão ao novo item
+                    novoItem.appendChild(spanTexto);
+                    novoItem.appendChild(botaoRemover);
+                    
+                    // Adiciona o novo item à lista ordenada
+                    listaInteresses.appendChild(novoItem);
+                    
+                    // Limpa o campo de input após a adição
+                    inputInteresse.value = '';
+                    
+                    // Coloca o foco de volta no campo de input
+                    inputInteresse.focus();
+                } else {
+                    // Se o campo estiver vazio, alerta o usuário
+                    alert('Por favor, digite um interesse antes de adicionar.');
+                }
+            }
+            
+            // Adiciona um event listener para o botão Adicionar
+            botaoAdicionar.addEventListener('click', adicionarInteresse);
+            
+            // Permite adicionar também pressionando Enter no campo de input
+            inputInteresse.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    adicionarInteresse();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
