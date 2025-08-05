@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Simples</title>
+    <title>Cadastro</title>
     <style>
-        /* RESET BÁSICO */
+        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
         
         body {
-            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         
-        /* HEADER - apenas o texto "cadastro" */
+        /* Header */
         header {
             background: #333;
             color: white;
@@ -27,9 +27,9 @@
             text-align: center;
         }
         
-        /* NAV - menu simples */
+        /* Nav */
         nav {
-            background: #555;
+            background: #444;
             padding: 10px;
         }
         
@@ -40,7 +40,7 @@
         }
         
         nav li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
         
         nav a {
@@ -48,7 +48,7 @@
             text-decoration: none;
         }
         
-        /* MAIN - área do formulário */
+        /* Main */
         main {
             flex: 1;
             display: flex;
@@ -58,8 +58,7 @@
             background: #f0f0f0;
         }
         
-        /* Container branco com formulário */
-        .form-box {
+        .form-container {
             background: white;
             width: 60%;
             padding: 20px;
@@ -67,14 +66,25 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         
-        /* Estilos do formulário */
+        .images {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        
+        .images img {
+            width: 30%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
         
-        input, button {
+        select, input, button {
             padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -86,7 +96,7 @@
             cursor: pointer;
         }
         
-        /* FOOTER - cookies */
+        /* Footer */
         footer {
             background: #333;
             color: white;
@@ -94,7 +104,7 @@
             padding: 10px;
         }
         
-        /* Modal de agradecimento (inicialmente escondido) */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -114,25 +124,19 @@
             text-align: center;
         }
         
-        /* RESPONSIVIDADE - quando a tela for pequena (celular) */
+        /* Responsividade */
         @media (max-width: 600px) {
-            header, nav {
-                display: none; /* Esconde header e nav */
+            header, nav, .images {
+                display: none;
             }
             
-            main {
-                width: 100%; /* Ocupa toda a tela */
-                padding: 10px;
-            }
-            
-            .form-box {
-                width: 100%; /* Formulário ocupa toda a largura */
+            .form-container {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Estrutura básica do site -->
     <header>
         <h1>cadastro</h1>
     </header>
@@ -140,56 +144,64 @@
     <nav>
         <ul>
             <li><a href="#">Menu 1</a></li>
-            <li><a href="#">Menu 2</a></li>
-            <li><a href="#">Menu 3</a></li>
         </ul>
     </nav>
     
     <main>
-        <div class="form-box">
+        <div class="form-container">
             <h2>Formulário</h2>
-            <form id="meuForm">
-                <input type="text" id="nome" placeholder="Seu nome" required>
+            
+            <div class="images">
+                <img src="https://via.placeholder.com/150" alt="Imagem 1">
+                <img src="https://via.placeholder.com/150" alt="Imagem 2">
+                <img src="https://via.placeholder.com/150" alt="Imagem 3">
+            </div>
+            
+            <h1>Cadastro</h1>
+            
+            <form id="formCadastro">
+                <input type="text" id="nomeUsuario" placeholder="Seu nome" required>
+                <select required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="op1">Opção 1</option>
+                    <option value="op2">Opção 2</option>
+                    <option value="op3">Opção 3</option>
+                </select>
                 <input type="email" placeholder="Seu e-mail" required>
-                <input type="password" placeholder="Sua senha" required>
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </main>
     
     <footer id="cookieFooter">
-        <p>Nós usamos cookies. <button id="aceitarCookies">Aceitar</button></p>
+        <p>Aceita cookies? <button id="btnAceitar">Aceitar</button></p>
     </footer>
     
-    <!-- Modal que vai aparecer após o cadastro -->
-    <div class="modal" id="obrigadoModal">
+    <div class="modal" id="modalObrigado">
         <div class="modal-content">
             <p id="mensagemObrigado"></p>
-            <button id="fecharModal">Fechar</button>
+            <button id="btnFechar">Fechar</button>
         </div>
     </div>
     
     <script>
-        // 1. Esconder o footer quando clicar em "Aceitar"
-        document.getElementById('aceitarCookies').addEventListener('click', function() {
+        // 1. Esconder footer ao clicar em Aceitar
+        document.getElementById('btnAceitar').addEventListener('click', function() {
             document.getElementById('cookieFooter').style.display = 'none';
         });
         
-        // 2. Quando enviar o formulário
-        document.getElementById('meuForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que a página recarregue
+        // 2. Mostrar mensagem ao enviar formulário
+        document.getElementById('formCadastro').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Pega o nome digitado
-            const nome = document.getElementById('nome').value;
-            
-            // Mostra a mensagem personalizada no modal
+            const nome = document.getElementById('nomeUsuario').value;
             document.getElementById('mensagemObrigado').textContent = 'Obrigado, ' + nome + '!';
-            document.getElementById('obrigadoModal').style.display = 'flex';
+            document.getElementById('modalObrigado').style.display = 'flex';
         });
         
-        // 3. Fechar o modal quando clicar no botão
-        document.getElementById('fecharModal').addEventListener('click', function() {
-            document.getElementById('obrigadoModal').style.display = 'none';
+        // 3. Fechar modal
+        document.getElementById('btnFechar').addEventListener('click', function() {
+            document.getElementById('modalObrigado').style.display = 'none';
         });
     </script>
 </body>
