@@ -1,0 +1,32 @@
+Aula 11
+Professor: Renato Pimentel
+
+Lista 02
+
+    Ex 18
+
+                M
+              /   \
+             F     S
+            / \   / \
+           D   J P   U
+               ...
+
+M
+FS
+DJPU
+AEHKOQTW
+
+20
+
+21 Qual a diferença entra AVL e ABB
+ATENÇÃO PROVA
+
+55
+
+
+-----------
+Pré ordem
+Em ordem
+Pós ordem
+

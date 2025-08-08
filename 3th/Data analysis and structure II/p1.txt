@@ -1,3 +1,14 @@
+P1: 5 questões
+1 de grafo
+-lista de adjacencia para montar um grafo direcionado e fazer busca por profundidade e largura (visitados)
+4 de árvores
+-árvore geradora minima: lista de adjacencias e montar a arvore geradora minima ponderada (pesos)
+cada interação escrevendo a lista pai
+-listar a lista de adjacencias dessa árvore geradora minima ponderada
+-porque Heap não é interessante (mostrar um grafo e a heap explicando o q vc apresentou)
+-traçar árvores binarias: altura 3, 4, 5 e 6; deu um conjunto
+
+
 Grafo: Um grafo ou rede é um modelo matemático que representa relações entre
 objetos – nós ou vértices – de um determinado conjunto.
 
@@ -126,4 +137,5 @@ Busca em profundidade
     Visita os vértices seguintes ao visitado que ainda não forão visitados.
 
 Busca em largura
+    Visita todos os vértices adjacentes a um vértice para prosseguir para o proximo vértice
     
