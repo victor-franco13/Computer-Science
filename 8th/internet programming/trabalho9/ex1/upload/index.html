@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulários em HTML</title>
+  <style>
+    input {
+      margin: 10px;      
+    }
+
+    button {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Repare que é necessário utilizar o atributo enctype com o valor 'multipart/form-data' -->
+  <form action="carregaImagem.php" method="post" enctype="multipart/form-data">
+    <label>Selecione o arquivo de imagem: <input type="file" name="arquivo" accept=".png, .jpg, .jpeg"></label>
+    <button>Enviar</button>
+  </form>
+
+</body>
+
+</html>
