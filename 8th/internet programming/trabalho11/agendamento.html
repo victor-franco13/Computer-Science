@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Agendamento</title>
+</head>
+<body>
+
+    <h2>Cadastrar Novo Agendamento</h2>
+
+    <form action="processa_agendamento.php" method="POST">
+        <label for="datahora">Data e Hora do Agendamento:</label><br>
+        <input type="datetime-local" id="datahora" name="datahora" required><br><br>
+
+        <label for="codigo_medico">Código do Médico:</label><br>
+        <input type="number" id="codigo_medico" name="codigo_medico" required><br><br>
+
+        <h3>Dados do Paciente</h3>
+        <label for="nome_paciente">Nome Completo:</label><br>
+        <input type="text" id="nome_paciente" name="nome_paciente" required><br><br>
+
+        <label for="sexo_paciente">Sexo:</label><br>
+        <select id="sexo_paciente" name="sexo_paciente" required>
+            <option value="">Selecione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+        </select><br><br>
+
+        <label for="email_paciente">E-mail:</label><br>
+        <input type="email" id="email_paciente" name="email_paciente" required><br><br>
+
+        <label for="telefone_paciente">Telefone:</label><br>
+        <input type="tel" id="telefone_paciente" name="telefone_paciente" required><br><br>
+
+        <input type="submit" value="Agendar Consulta">
+    </form>
+
+</body>
+</html>
