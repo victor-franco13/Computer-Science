@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .form-row .input-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-row .input-group-full {
+            flex: 2;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="salvar_cliente.php" method="POST">
+        <div class="form-row">
+            <div class="input-group input-group-full">
+                <label for="nome_completo">Nome completo</label>
+                <input type="text" id="nome_completo" name="nome_completo">
+            </div>
+            <div class="input-group">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-group input-group-full">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-group">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+            <div class="input-group input-group-full">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" value="Avenida João Naves de Ávila">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro">
+            </div>
+            <div class="input-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade">
+            </div>
+            <div class="input-group">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                    <option value="">Selecione</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    </select>
+            </div>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Concordo com os termos</label>
+        </div>
+        <button type="submit">+ Cadastrar</button>
+    </form>
+</div>
+
+</body>
+</html>
