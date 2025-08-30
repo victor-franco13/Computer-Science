@@ -86,3 +86,5 @@ Professor: Renato Pimentel
         de elementos.
 
         -Octree: equivalente 3D da quadtree
+
+slide10
