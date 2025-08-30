@@ -1,0 +1,88 @@
+Revisão P2
+Professor: Renato Pimentel
+
+-Árvores:
+    -Definições:
+        Uma árvore é um abstração matemática usadada para representar estruturas
+        hierárquicas não lineares do objetos modelados
+
+        Definida usando um conjunto de nós e arestas
+
+        Qualquer par de vértices está conectado a apenas uma aresta
+
+            Grafo não direcionado, conexo e acíclico
+
+
+    -Conceitos:
+        Vértice, ou nó, é cada uma das entidades representadas na árvore.
+
+        Assim como em grafos, cada aresta representa a ligação (conexão)
+        existente entre dois vértices
+
+        Raiz: vértice mais alto na árvore, o único que não possui pai.
+
+        Pai ou ancestral: vértice antecessor imediato de outro vértice.
+
+        Filho: o vértice sucessor imediato de outro vértice.
+
+        Nó folha ou terminal: qualquer vértice que não possui filhos.
+
+        Nó interno ou não-terminal: vértice que possui ao menos um filho
+
+        Caminho: sequencia de nós, de modo que sempre existe uma aresta
+        conectando o nó anterior ao seguinte.
+            Existe exatamente um caminho da raiz até qualquer um dos vértices.
+
+    -Subárvores e grau:
+        Dado um nó, cada filho é considerado a raiz de uma nova subárvore;
+
+        Qualquer nó é a raiz de uma subárvore que consiste do próprio e dos nós
+        abaixo dele (conceito recursivo).
+
+        O grau de um nó é o número de subárvores (ou filhos) que possui.
+            Nós folhas possuem grau zero
+
+    -Nível e altura
+        Nivel:
+        É dado pelo número de nós no caminho entre o nó em questão e a raiz
+        (nível 0).
+        Nós são classificados em diferentes níveis.
+
+        Altura:
+        Ou profundidade, corresponde ao total de níveis de uma árvore;
+        Comprimento do caminho mais longo da raiz até uma de suas folhas.
+
+    -Tipos de árvores:
+        - árvore binária de busca;
+        - árvore AVL;
+        - árvore rubro-negra;
+        - árvore B,B+ e B*;
+        - árvore 2-3;
+        - árvore 2-3-4;
+        - quadtree;
+        - octree.
+
+    -Árvore binária de busca
+        -para cada nó, seus descendetes a esquerda possuem valores menores
+        e a direita possuem valores maiores.
+
+        Árvore desbalanceada pode ser resolvido de dois jeitos:
+        -Árvore AVL;
+        -Árvore rubro-negra (ou red-black)
+
+    -Árvore B e variantes
+        -são EDs balanceadas usadas principalmente para armazenar e organizar
+        grandes volumes de dados em sistemas que requerem accesso eficiente
+
+        - Árvore B+: dados armazenados somente nas folhas;
+        - Árvore B*: otimização para muitas inserções/remoções (política de divisão);
+        - Árvore 2-3 e 2-3-4: árvores B onde cada nó pode ter 1 ou 2 chaves 
+        (e 2 ou 3 filhos); ou 1 a 3 chaves e 2 a 4 filhos, respectivamente.
+
+    -Quadtree e octree
+        -Quadtree: ED usada para armazenar e organizar informações espaciais
+        de forma eficiente. Particiona recursivamente um espaço 2D em quatro
+        regiões menores, facilitando operações como busca, inserção e remoção
+        de elementos.
+
+        -Octree: equivalente 3D da quadtree
