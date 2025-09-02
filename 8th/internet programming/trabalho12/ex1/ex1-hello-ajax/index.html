@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teste AJAX Simples</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.5rem;
+      background-image: url("images/bg2.jpg");
+      background-size: cover;
+      margin: 0;
+    }
+
+    main {
+      width: 60%;
+      background-color: #fff;
+      border: 0.5px solid #ccc;
+      margin: 0;
+      padding: 2% 4%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <h1>Faculdade de Computação da UFU</h1>
+    <p>A Faculdade de Computação (FACOM) da Universidade...</p>
+    <p>No início dos anos 2000 foi criado na Faculdade...</p>
+    <button>Carregar mais conteúdo com Ajax</button>
+  </main>
+
+  <script>
+    function loadExtraContent() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "conteudoAdicional.html", true);
+      xhr.onload = function () {
+        const main = document.querySelector("main");
+        main.insertAdjacentHTML("beforeend", xhr.responseText);
+      };
+      xhr.send();
+    }
+    const button = document.querySelector("button");
+    button.addEventListener("click", loadExtraContent);
+  </script>
+  
+</body>
+
+</html>

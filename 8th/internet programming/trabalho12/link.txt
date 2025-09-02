@@ -1,0 +1,3 @@
+https://internetprogramming.free.nf/trabalho12/ex1/ex1-hello-ajax
+https://internetprogramming.free.nf/trabalho12/ex1/ex2-recebendo-json
+https://internetprogramming.free.nf/trabalho12/ex1/ex3-alunos-json
